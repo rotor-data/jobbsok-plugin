@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-slot="titel">Personligt brev</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="mall.css">
+</head>
+<body class="brev">
+<main class="sida">
+<header class="huvud" data-del="brevhuvud">
+<div class="huvud-text">
+<h1 class="namn" data-slot="person.namn">Namn</h1>
+<p class="yrkestitel" data-slot="person.titel">Yrkestitel</p>
+<ul class="kontakt"><li data-repeat="person.kontakt"><a data-slot="text">kontakt</a></li></ul>
+</div>
+</header>
+<div class="mottagare">
+<div data-slot="mottagare.bolag">Bolag</div>
+<div data-slot="mottagare.namn">Mottagare</div>
+<div data-repeat="mottagare.adress_rader">Adress</div>
+<div class="datum" data-slot="datum">Datum</div>
+</div>
+<h2 class="brev-rubrik" data-slot="rubrik">Rubrik</h2>
+<p class="stycke" data-repeat="stycken">Stycke</p>
+<div class="halsning"><span data-slot="halsning">Vänliga hälsningar</span>
+<div class="underskrift" data-slot="person.namn">Namn</div></div>
+</main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/analys.schema.json",
+  "title": "Annonsanalys (ansokningar/<mapp>/analys.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "krav": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "krav": {
+            "type": "string"
+          },
+          "typ": {
+            "enum": [
+              "ska",
+              "meriterande",
+              "underforstatt"
+            ]
+          },
+          "kravtyp": {
+            "enum": [
+              "hart",
+              "onskat"
+            ],
+            "description": "hart = legitimation, behörighet/certifiering enligt lag, körkort som rollen kräver, säkerhetsprövning/medborgarskap, uttryckligt centralt språkkrav. Allt annat (även 'X års erfarenhet') är onskat. Valfritt; saknas det räknas kravet som onskat."
+          },
+          "matchar": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lucka": {
+            "type": "boolean"
+          },
+          "kommentar": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "krav",
+          "typ"
+        ]
+      }
+    },
+    "nyckelord": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "vinkel": {
+      "type": "string"
+    },
+    "fragor_till_arbetsgivaren": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sprak": {
+      "enum": [
+        "sv",
+        "en"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "krav"
+  ]
+}

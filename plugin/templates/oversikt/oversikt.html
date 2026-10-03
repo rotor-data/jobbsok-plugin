@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Jobbsök – översikt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<a class="skip" href="#innehall">Hoppa till innehållet</a>
+<main id="innehall" class="wrap">
+  <header class="top">
+    <div>
+      <p class="eyebrow" id="datum"></p>
+      <h1 id="halsning">Ditt jobbsökande</h1>
+    </div>
+    <p class="meta" id="genererad"></p>
+  </header>
+
+  <section aria-labelledby="h-resa" class="card hero">
+    <h2 id="h-resa" class="sr">Var du är</h2>
+    <ol class="resa" id="resa"></ol>
+    <div class="nasta" id="nasta"></div>
+  </section>
+
+  <section aria-labelledby="h-du" class="card du" id="du">
+    <h2 id="h-du" class="h2">Det här vet vi om dig</h2>
+    <div id="profil"></div>
+  </section>
+
+  <section aria-labelledby="h-rikt" class="rikt" id="riktningar" hidden>
+    <div class="riktkopf"><h2 id="h-rikt" class="h2">Riktningar</h2><p class="meta" id="rikt-vikter"></p></div>
+    <div class="riktgrid" id="riktlista"></div>
+  </section>
+
+  <nav class="tabs" role="tablist" aria-label="Delar">
+    <button role="tab" id="t-jobb" aria-controls="p-jobb" aria-selected="true">Jobb <span class="n" id="n-jobb"></span></button>
+    <button role="tab" id="t-ans" aria-controls="p-ans" aria-selected="false" tabindex="-1">Ansökningar <span class="n" id="n-ans"></span></button>
+    <button role="tab" id="t-kal" aria-controls="p-kal" aria-selected="false" tabindex="-1">Kalender <span class="n" id="n-kal"></span></button>
+    <button role="tab" id="t-bev" aria-controls="p-bev" aria-selected="false" tabindex="-1">Bevakning</button>
+  </nav>
+
+  <section role="tabpanel" id="p-jobb" aria-labelledby="t-jobb" class="panel"></section>
+  <section role="tabpanel" id="p-ans" aria-labelledby="t-ans" class="panel" hidden></section>
+  <section role="tabpanel" id="p-kal" aria-labelledby="t-kal" class="panel" hidden></section>
+  <section role="tabpanel" id="p-bev" aria-labelledby="t-bev" class="panel" hidden></section>
+
+  <footer class="fot">Sidan uppdateras när du arbetar med Claude. Knapparna kopierar en mening som du klistrar in i chatten.</footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script id="data" type="application/json">/*__DATA__*/</script>
+<script>/*__JS__*/</script>
+</body>
+</html>

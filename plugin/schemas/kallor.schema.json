@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/kallor.schema.json",
+  "title": "Jobbkällor (sok/kallor.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "kallor": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "typ": {
+            "enum": [
+              "jobtech",
+              "teamtailor_rss",
+              "lever",
+              "ashby",
+              "greenhouse",
+              "smartrecruiters",
+              "workday",
+              "pagehash",
+              "sok_url",
+              "rss",
+              "json_api",
+              "sitemap",
+              "mejl"
+            ]
+          },
+          "namn": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "aktiv": {
+            "type": "boolean"
+          },
+          "anteckning": {
+            "type": "string"
+          },
+          "senast_hamtad": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "etag": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "kalla_url": {
+            "type": "string",
+            "description": "sidan användaren angav, om flödes-URL:en skiljer sig"
+          },
+          "tillagd_av": {
+            "enum": [
+              "anvandare",
+              "jobbkallor",
+              "jobbjakt"
+            ]
+          },
+          "tillagd": {
+            "type": "string",
+            "description": "YYYY-MM-DD"
+          },
+          "borttagen": {
+            "type": "string",
+            "description": "YYYY-MM-DD (bara i kallor_borttagna.json)"
+          },
+          "instruktion": {
+            "type": "string",
+            "description": "typ mejl: hur aviseringen sätts upp"
+          },
+          "lankmonster": {
+            "type": "string",
+            "description": "pagehash/sok_url: regex för annonslänkar (länklista-diff)"
+          },
+          "falt": {
+            "type": "object",
+            "description": "json_api: punkt-sökvägar",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "titel": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "arbetsgivare": {
+                "type": "string"
+              },
+              "publicerad": {
+                "type": "string"
+              },
+              "ort": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "deadline": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "lista": {
+            "type": "string",
+            "description": "json_api: punkt-sökväg till listan"
+          },
+          "distans": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "enum": [
+              0,
+              1,
+              2,
+              null
+            ]
+          },
+          "monster": {
+            "type": "string",
+            "description": "sitemap: regex för annons-URL:er"
+          },
+          "krav": {
+            "type": "string",
+            "description": "sitemap: regex som annonsens ort/land/text måste matcha"
+          },
+          "max_nya": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "arbetsgivare_ur_titel": {
+            "type": "boolean",
+            "description": "rss: dela 'Bolag: Titel'"
+          },
+          "min_intervall_h": {
+            "type": "number",
+            "minimum": 0
+          },
+          "signal": {
+            "type": "boolean",
+            "description": "skrivs till sok/signaler.json i stället för jobb"
+          },
+          "signalord": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sokord": {
+            "type": "string",
+            "description": "workday: searchText"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "typ",
+          "namn"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kallor"
+  ]
+}

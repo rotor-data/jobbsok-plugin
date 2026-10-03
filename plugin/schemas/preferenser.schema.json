@@ -1,0 +1,312 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/preferenser.schema.json",
+  "title": "Preferenser (profil/preferenser.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "riktningar": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "namn": {
+            "type": "string"
+          },
+          "yrkes_id": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sokord": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "exkludera_ord": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "namn"
+        ]
+      }
+    },
+    "orter": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "namn": {
+            "type": "string"
+          },
+          "kommun_id": {
+            "type": "string"
+          },
+          "region_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "namn"
+        ]
+      }
+    },
+    "hårda_gränser": {
+      "type": "object",
+      "properties": {
+        "max_pendling_min": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "pendling_satt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "max_resdagar_manad": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "distans_dagar": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "lonegolv_manad": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "anstallningsform": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "omfattning": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "varden_topp5": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5
+    },
+    "vitaminer": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "min": {
+            "type": "number"
+          },
+          "max": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "arbetsdag": {
+      "type": "object",
+      "properties": {
+        "idealvecka": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "aktivitet": {
+                "type": "string"
+              },
+              "timmar": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "aktivitet"
+            ]
+          }
+        },
+        "energigivare": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "energitjuvar": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "kompetens_id": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exkludera_arbetsgivare": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sprak_ansokan": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "sv",
+          "en"
+        ]
+      }
+    },
+    "rollkort_vikter": {
+      "type": "object",
+      "description": "Vikter i rollkort.py jamfor (0 = räknas inte). Standard: varden 3, arbetsdag 3, harda_granser 2, glapp 1, marknad 1, kultur 1, ledarskap 1.",
+      "properties": {
+        "varden": {
+          "type": "number",
+          "minimum": 0
+        },
+        "arbetsdag": {
+          "type": "number",
+          "minimum": 0
+        },
+        "harda_granser": {
+          "type": "number",
+          "minimum": 0
+        },
+        "glapp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "marknad": {
+          "type": "number",
+          "minimum": 0
+        },
+        "kultur": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ledarskap": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "kultur_ideal": {
+      "type": "object",
+      "description": "Ideal ur kultur-Q-sorten (kultur-qsort-18-v1), samma id som arbetsgivarkortet",
+      "properties": {
+        "instrument": {
+          "type": "string"
+        },
+        "topp": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^s([1-9]|1[0-8])$"
+          },
+          "maxItems": 4
+        },
+        "botten": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^s([1-9]|1[0-8])$"
+          },
+          "maxItems": 4
+        }
+      },
+      "additionalProperties": false
+    },
+    "ledarskap_krav": {
+      "type": "object",
+      "properties": {
+        "ansvar": {
+          "enum": [
+            "ingen",
+            "sak",
+            "personal",
+            null
+          ]
+        },
+        "chefsegenskaper_topp3": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "tillganglig",
+              "ger_riktning",
+              "ger_frihet",
+              "skyddar",
+              "utvecklar"
+            ]
+          },
+          "maxItems": 3
+        },
+        "avstamning_frekvens": {
+          "enum": [
+            "dagligen",
+            "veckovis",
+            "varannan_vecka",
+            "vid_behov",
+            null
+          ]
+        },
+        "krav": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "varningssignaler": {
+      "type": "array",
+      "description": "Hennes ord: kultur- och chefssignaler att varna för",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version"
+  ]
+}

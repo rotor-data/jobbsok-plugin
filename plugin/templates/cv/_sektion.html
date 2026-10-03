@@ -1,0 +1,11 @@
+<section class="sektion {{ s.nyckel }}{% if s.ar_text %} text{% endif %}">
+<h2>{{ s.rubrik }}</h2>
+{% for p in s.poster %}<div class="post{% if p.lang %} lang-post{% endif %}">
+<div class="post-huvud"><div class="post-topp"><h3 class="post-titel">{{ p.titel }}</h3>{% if p.period %}<span class="period">{{ p.period }}</span>{% endif %}</div>
+{% if p.plats %}<div class="plats">{{ p.plats }}</div>{% endif %}</div>
+{% if p.text %}<p class="post-text">{{ p.text }}</p>{% endif %}
+{% if p.punkter %}<ul class="punkter">{% for x in p.punkter %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+</div>
+{% endfor %}{% for g in s.grupper %}<p class="grupp">{% if g.etikett %}<span class="grupp-etikett">{{ g.etikett }}</span>{% endif %}{{ g.rad }}</p>
+{% endfor %}{% for t in s.stycken %}<p class="text-stycke">{{ t }}</p>
+{% endfor %}</section>

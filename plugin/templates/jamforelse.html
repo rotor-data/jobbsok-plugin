@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ rubrik }}</title>
+<style>
+:root { --bg:#f3f2ef; --kort:#fff; --text:#222; --dampad:#6b6b6b; --accent:#2f5d62; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+header { max-width: 1500px; margin: 0 auto; padding: 28px 24px 8px; }
+h1 { font-size: 22px; margin: 0 0 6px; font-weight: 650; }
+.ingress { color: var(--dampad); margin: 0; max-width: 70ch; }
+.rutnat { max-width: 1500px; margin: 0 auto; padding: 18px 24px 40px; display: grid; gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+.kort { background: var(--kort); border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 6px 20px rgba(0,0,0,.05);
+  overflow: hidden; display: flex; flex-direction: column; }
+.kort-topp { padding: 14px 16px 10px; display: flex; gap: 12px; align-items: baseline; }
+.bokstav { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff;
+  display: grid; place-items: center; font-weight: 700; }
+.kort h2 { font-size: 16px; margin: 0; }
+.besk { color: var(--dampad); font-size: 13.5px; margin: 2px 0 0; }
+.fakta { padding: 0 16px 10px; font-size: 13px; color: var(--dampad); }
+.fakta .varn { color: #9a4b00; }
+.forhand { background: #e7e6e2; padding: 14px; flex: 1; }
+.forhand img { display: block; width: 100%; height: auto; box-shadow: 0 1px 4px rgba(0,0,0,.15); background: #fff; }
+.ram { position: relative; width: 100%; aspect-ratio: 210 / 297; overflow: hidden; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+.ram iframe { position: absolute; top: 0; left: 0; width: 900px; height: 1273px; border: 0;
+  transform-origin: 0 0; transform: scale(var(--skala, .4)); }
+.lankar { padding: 10px 16px 14px; font-size: 13.5px; display: flex; gap: 14px; }
+.lankar a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+<h1>{{ rubrik }}</h1>
+{% if ingress %}<p class="ingress">{{ ingress }}</p>{% endif %}
+</header>
+<div class="rutnat">
+{% for k in kort %}<article class="kort">
+<div class="kort-topp"><span class="bokstav">{{ k.bokstav }}</span><div><h2>{{ k.namn }}</h2>{% if k.beskrivning %}<p class="besk">{{ k.beskrivning }}</p>{% endif %}</div></div>
+<div class="fakta">{{ k.layout }} · {{ k.sprak }}{% if k.sidor %} · {{ k.sidor }} sid.{% endif %}{% for v in k.varningar %}<div class="varn">{{ v }}</div>{% endfor %}</div>
+<div class="forhand">{% if k.bild_rel %}<img src="{{ k.bild_rel }}" alt="Förhandsvisning {{ k.bokstav }}">{% else %}<div class="ram"><iframe src="{{ k.html_rel }}" title="Förslag {{ k.bokstav }}" loading="lazy"></iframe></div>{% endif %}</div>
+<div class="lankar">{% if k.pdf_rel %}<a href="{{ k.pdf_rel }}">Öppna PDF</a>{% endif %}<a href="{{ k.html_rel }}">Öppna HTML</a></div>
+</article>
+{% endfor %}</div>
+<script>
+// Skala iframe-förhandsvisningar till kortets bredd.
+function skala(){ document.querySelectorAll('.ram').forEach(function(r){ r.style.setProperty('--skala', r.clientWidth/900); }); }
+window.addEventListener('resize', skala); skala();
+</script>
+</body>
+</html>

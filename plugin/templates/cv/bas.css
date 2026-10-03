@@ -1,0 +1,158 @@
+/* Gemensam bas för CV och brev. Alla mått kommer från tokens i design.json
+   via CSS-variablerna i :root (skrivs av render.py). Inga layouttabeller. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  margin: 0;
+  font-family: var(--font-brod);
+  font-size: var(--storlek-brod);
+  line-height: var(--radavstand);
+  color: var(--farg-text);
+  background: #fff;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums;
+  text-rendering: optimizeLegibility;
+  hyphens: manual;
+  overflow-wrap: break-word;
+}
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p, ul { margin: 0; padding: 0; }
+
+/* Skärm: visa som ett A4-ark. Utskrift: @page styr marginalerna. */
+@media screen {
+  html { background: #e9e9ec; }
+  .sida {
+    width: 210mm; min-height: 297mm; margin: 12mm auto; background: #fff;
+    padding: calc(var(--marginal) * .85) var(--marginal) var(--marginal);
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 8px 28px rgba(0,0,0,.08);
+  }
+}
+@media print { .sida { width: auto; } }
+
+/* ---------- huvud ---------- */
+.huvud { margin-bottom: calc(var(--sektion-luft) * 1.1); }
+.namn {
+  font-family: var(--font-rubrik);
+  font-size: var(--storlek-namn);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--farg-text);
+}
+.yrkestitel {
+  margin-top: .3em;
+  font-size: calc(var(--storlek-brod) * 1.22);
+  color: var(--farg-accent);
+  font-weight: 500;
+  line-height: 1.25;
+}
+.kontakt { margin-top: .7em; font-size: calc(var(--storlek-brod) * .93); color: var(--farg-dampad); }
+/* Punkt mellan kontaktuppgifter; punkten i början av en ombruten rad klipps bort. */
+.kontakt { display: flex; flex-wrap: wrap; overflow: hidden; margin-left: -1.2em; }
+.kontakt span { white-space: nowrap; position: relative; margin-left: 1.2em; }
+.kontakt span::before { content: "·"; position: absolute; left: -.8em; opacity: .7; }
+.kontakt span:first-child::before { content: none; } /* WeasyPrint klipper inte punkten */
+
+/* ---------- sektioner ---------- */
+.sektion { margin-top: var(--sektion-luft); }
+.sektion:first-child { margin-top: 0; }
+h2 {
+  font-family: var(--font-rubrik);
+  font-size: var(--storlek-rubrik);
+  font-weight: 600;
+  color: var(--farg-accent);
+  line-height: 1.2;
+  margin-bottom: .55em;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.stil-linje h2 { padding-bottom: .25em; border-bottom: .6pt solid color-mix(in srgb, var(--farg-accent) 55%, #fff); }
+.stil-versaler h2 { text-transform: uppercase; letter-spacing: .09em; font-size: calc(var(--storlek-rubrik) * .8); font-weight: 700; }
+.stil-accentstreck h2::before {
+  content: ""; display: inline-block; width: 1.1em; height: .18em; background: var(--farg-accent);
+  vertical-align: middle; margin-right: .5em; position: relative; top: -.08em;
+}
+
+/* En post = en roll/utbildning. Delas aldrig mellan sidor. */
+.post { break-inside: avoid; page-break-inside: avoid; margin-top: .85em; }
+.post.lang-post { break-inside: auto; page-break-inside: auto; }
+.post-huvud { break-inside: avoid; break-after: avoid; page-break-after: avoid; }
+.punkter li { break-inside: avoid; }
+.post:first-of-type { margin-top: 0; }
+.post-topp { display: flex; justify-content: space-between; align-items: baseline; gap: 1.2em; }
+.post-titel { font-weight: 600; font-weight: 650; font-size: calc(var(--storlek-brod) * 1.04); line-height: 1.25; }
+.period {
+  flex: none; white-space: nowrap; font-size: calc(var(--storlek-brod) * .92);
+  color: var(--farg-dampad); font-variant-numeric: tabular-nums lining-nums;
+}
+.plats { color: var(--farg-dampad); font-size: calc(var(--storlek-brod) * .95); }
+.post-text { margin-top: .25em; }
+.punkter { margin-top: .3em; padding-left: 1.05em; }
+.punkter li { margin-top: .16em; padding-left: .15em; }
+.punkter li::marker { color: var(--farg-accent); font-size: .9em; }
+
+/* Rubrik + första post hålls ihop så att rubriken aldrig blir föräldralös. */
+.sektion > h2 + .post, .sektion > h2 + p, .sektion > h2 + .grupp { break-before: avoid; page-break-before: avoid; }
+
+.text-stycke + .text-stycke { margin-top: .5em; }
+.grupp { break-inside: avoid; margin-top: .3em; }
+.grupp-etikett { font-weight: 600; font-weight: 650; }
+.grupp-etikett::after { content: ": "; }
+.referenser-text { color: var(--farg-dampad); }
+
+p, li { orphans: 3; widows: 3; }
+
+/* ---------- sidokolumn ---------- */
+.lay-sidokolumn .kropp { display: grid; grid-template-columns: minmax(0, 1fr) 52mm; column-gap: 9mm; }
+.lay-sidokolumn .sidospalt {
+  border-left: .6pt solid color-mix(in srgb, var(--farg-accent) 35%, #fff);
+  padding-left: 5mm; font-size: calc(var(--storlek-brod) * .95);
+}
+.lay-sidokolumn .sidospalt h2 { font-size: calc(var(--storlek-rubrik) * .85); border-bottom: none; padding-bottom: 0; }
+.lay-sidokolumn .sidospalt .grupp { margin-top: .55em; }
+.lay-sidokolumn .sidospalt .grupp-etikett { display: block; color: var(--farg-dampad); font-weight: 600; font-size: .92em; }
+.lay-sidokolumn .sidospalt .grupp-etikett::after { content: ""; }
+.lay-sidokolumn .sidospalt ul.lista { list-style: none; }
+.lay-sidokolumn .sidospalt ul.lista li { margin-top: .12em; }
+.lay-sidokolumn .kontakt-lista { list-style: none; color: var(--farg-text); }
+.lay-sidokolumn .kontakt-lista li { margin-top: .25em; overflow-wrap: anywhere; }
+.lay-sidokolumn .kontakt-lista .etik { display: block; color: var(--farg-dampad); font-size: .85em; }
+
+/* ---------- kompakt ---------- */
+.lay-kompakt .huvud { display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm;
+  padding-bottom: .8em; border-bottom: 1.2pt solid var(--farg-accent); }
+.lay-kompakt .huvud .kontakt { display: block; margin: 0; text-align: right; max-width: 85mm; line-height: 1.45; overflow: visible; }
+.lay-kompakt .huvud .kontakt span { display: block; margin: 0; }
+.lay-kompakt .huvud .kontakt span::before { content: none; }
+.lay-kompakt .post { display: grid; grid-template-columns: 27mm minmax(0, 1fr); column-gap: 5mm; margin-top: .6em; }
+.lay-kompakt .post-huvud, .lay-kompakt .post-topp { display: contents; }
+.lay-kompakt .post .period { grid-column: 1; grid-row: 1 / span 2; padding-top: .1em; white-space: normal; }
+.lay-kompakt .post-titel, .lay-kompakt .plats, .lay-kompakt .post-text, .lay-kompakt .punkter { grid-column: 2; }
+.lay-kompakt .punkter li { margin-top: .08em; }
+.lay-kompakt .grupp { padding-left: 32mm; text-indent: -32mm; }
+.lay-kompakt .grupp-etikett { display: inline-block; width: 32mm; text-indent: 0; padding-right: 5mm;
+  vertical-align: top; color: var(--farg-dampad); font-weight: 600; }
+.lay-kompakt .grupp-etikett::after { content: ""; }
+.lay-kompakt .sektion.text .text-stycke, .lay-kompakt .sektion.referenser p { padding-left: 32mm; }
+
+/* ---------- porträtt ---------- */
+.lay-portratt .huvud { display: flex; align-items: center; gap: 7mm; }
+.lay-portratt .huvud-text { flex: 1; min-width: 0; }
+.lay-portratt .foto {
+  flex: none; width: 30mm; height: 30mm; border-radius: 50%; object-fit: cover;
+  border: 1.2pt solid color-mix(in srgb, var(--farg-accent) 40%, #fff);
+}
+.lay-portratt .huvud { padding-bottom: calc(var(--sektion-luft) * .8); border-bottom: .6pt solid color-mix(in srgb, var(--farg-accent) 35%, #fff); }
+
+/* ---------- brev ---------- */
+.brev .huvud { padding-bottom: .8em; border-bottom: .6pt solid color-mix(in srgb, var(--farg-accent) 45%, #fff); margin-bottom: 11mm; }
+.brev .namn { font-size: calc(var(--storlek-namn) * .8); }
+.brev .mottagare { line-height: 1.4; }
+.brev .datum { margin-top: 1.2em; color: var(--farg-dampad); }
+.brev .brev-rubrik { font-family: var(--font-rubrik); font-size: var(--storlek-rubrik); color: var(--farg-accent);
+  font-weight: 600; margin-top: 9mm; margin-bottom: 1em; line-height: 1.25; }
+.brev .stycke { margin-top: .85em; max-width: 160mm; }
+.brev .stycke:first-of-type { margin-top: 0; }
+.brev .halsning { margin-top: 1.6em; break-inside: avoid; }
+.brev .underskrift { margin-top: .4em; font-weight: 600; font-weight: 650; }

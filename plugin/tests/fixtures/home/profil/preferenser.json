@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "riktningar": [{"namn": "Kommunikation offentlig sektor", "yrkes_id": [], "sokord": ["kommunikatör", "kommunikationsstrateg"], "exkludera_ord": ["säljare"]}],
+  "orter": [{"namn": "Uppsala", "kommun_id": "otaF_bQY_4ZD", "region_id": "zupA_8Nt_xcD"}],
+  "hårda_gränser": {"max_pendling_min": 45, "pendling_satt": "kollektivt", "max_resdagar_manad": 2, "distans_dagar": {"min": 1, "max": 3}, "lonegolv_manad": 42000, "anstallningsform": ["tillsvidare"], "omfattning": ["heltid"]},
+  "varden_topp5": ["samhällsnytta", "självständighet", "lärande", "kollegor", "balans"],
+  "vitaminer": {"variation": {"min": 5, "max": 8}, "autonomi": {"min": 6, "max": 10}, "social_kontakt": {"min": 4, "max": 7}, "arbetsbelastning": {"min": 3, "max": 6}},
+  "arbetsdag": {"idealvecka": [{"aktivitet": "skriva", "timmar": 12}, {"aktivitet": "möten", "timmar": 10}], "energigivare": ["skriva klart en text"], "energitjuvar": ["långa statusmöten"]},
+  "kompetens_id": [],
+  "exkludera_arbetsgivare": [],
+  "sprak_ansokan": ["sv", "en"]
+}

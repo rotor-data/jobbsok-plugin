@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/arbetsgivarkort.schema.json",
+  "title": "Arbetsgivarkort (sok/arbetsgivare/<slug>.json)",
+  "type": "object",
+  "required": ["schema_version", "slug", "arbetsgivare", "typ", "uppdaterad", "rekrytering", "annonssprak", "manuellt", "okant", "matchning"],
+  "additionalProperties": false,
+  "$defs": {
+    "kalla": {
+      "type": "object",
+      "required": ["typ", "datum"],
+      "properties": {
+        "typ": {"enum": ["regel", "jobtech_historical", "annons", "bolagsverket_ixbrl", "cision", "kolada", "arsredovisning", "manuell"]},
+        "url": {"type": ["string", "null"]},
+        "parametrar": {"type": "object"},
+        "datum": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}"}
+      }
+    },
+    "status": {"enum": ["auto", "manuellt", "ifylld", "saknas", "kraver_nyckel", "fel", "ej_tillampligt"]},
+    "block": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {"status": {"$ref": "#/$defs/status"}, "kalla": {"$ref": "#/$defs/kalla"}, "anteckning": {"type": "string"}}
+    },
+    "manuell": {
+      "type": "object",
+      "required": ["varde", "status"],
+      "properties": {"varde": {"type": ["string", "array"]}, "status": {"$ref": "#/$defs/status"}, "instruktion": {"type": "string"}, "datum": {"type": "string"}}
+    }
+  },
+  "properties": {
+    "schema_version": {"const": 1},
+    "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "arbetsgivare": {"type": "string"},
+    "orgnr": {"type": ["string", "null"], "pattern": "^\\d{10}$"},
+    "typ": {
+      "type": "object", "required": ["varde", "kalla"],
+      "properties": {"varde": {"enum": ["kommun", "region", "stat", "privat", "ideell"]}, "hur": {"type": "string"}, "kalla": {"$ref": "#/$defs/kalla"}}
+    },
+    "skapad": {"type": "string"},
+    "uppdaterad": {"type": "string"},
+    "annons": {"type": ["object", "null"]},
+    "rekrytering": {
+      "$ref": "#/$defs/block",
+      "properties": {
+        "per_ar": {"type": "array", "items": {"type": "object", "required": ["ar", "annonser"]}},
+        "upprepade_roller": {"type": "array", "items": {"type": "object", "required": ["titel", "annonser"]}},
+        "osakert": {"const": true}
+      }
+    },
+    "annonssprak": {
+      "$ref": "#/$defs/block",
+      "properties": {"sjalvbeskrivning": {"const": true}, "teman": {"type": "object"}, "axlar": {"type": "array"}, "mappning": {"type": "object"}}
+    },
+    "ekonomi": {"$ref": "#/$defs/block"},
+    "press": {"$ref": "#/$defs/block"},
+    "offentligt": {
+      "type": ["object", "null"],
+      "properties": {"kolada": {"$ref": "#/$defs/block"}, "arsredovisning": {"$ref": "#/$defs/block"}}
+    },
+    "manuellt": {
+      "type": "object",
+      "required": ["glassdoor", "linkedin_stannar", "personer_att_fraga", "egna_intryck"],
+      "additionalProperties": false,
+      "properties": {
+        "glassdoor": {"$ref": "#/$defs/manuell"},
+        "linkedin_stannar": {"$ref": "#/$defs/manuell"},
+        "personer_att_fraga": {"$ref": "#/$defs/manuell"},
+        "egna_intryck": {"$ref": "#/$defs/manuell"}
+      }
+    },
+    "okant": {
+      "type": "array",
+      "items": {"type": "object", "required": ["fraga", "varfor", "till"],
+                "properties": {"fraga": {"type": "string"}, "varfor": {"type": "string"}, "till": {"type": "string"}, "kalla": {"type": ["string", "null"]}}}
+    },
+    "matchning": {
+      "type": "object",
+      "required": ["stammer", "skaver", "okant", "varningsflaggor"],
+      "properties": {"stammer": {"type": "array"}, "skaver": {"type": "array"}, "okant": {"type": "array"}, "varningsflaggor": {"type": "array"}}
+    }
+  }
+}

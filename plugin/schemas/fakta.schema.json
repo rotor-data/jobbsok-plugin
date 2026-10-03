@@ -1,0 +1,386 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/fakta.schema.json",
+  "title": "Faktabank (profil/fakta.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "person": {
+      "type": "object",
+      "properties": {
+        "namn": {
+          "type": "string"
+        },
+        "titel": {
+          "$ref": "#/$defs/Txt"
+        },
+        "ort": {
+          "type": "string"
+        },
+        "epost": {
+          "type": "string"
+        },
+        "telefon": {
+          "type": "string"
+        },
+        "lankar": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "etikett": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "url"
+            ]
+          }
+        },
+        "foto": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "korkort": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "namn"
+      ]
+    },
+    "sammanfattning_rad": {
+      "$ref": "#/$defs/Txt"
+    },
+    "roller": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^r\\d+$"
+          },
+          "arbetsgivare": {
+            "type": "string"
+          },
+          "titel": {
+            "$ref": "#/$defs/Txt"
+          },
+          "ort": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{4}-(0[1-9]|1[0-2])$"
+          },
+          "slut": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}-(0[1-9]|1[0-2])$"
+          },
+          "beskrivning": {
+            "$ref": "#/$defs/Txt"
+          },
+          "meriter": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^r\\d+-m\\d+$"
+                },
+                "text": {
+                  "$ref": "#/$defs/Txt"
+                },
+                "kort": {
+                  "$ref": "#/$defs/Txt"
+                },
+                "siffror": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "varde": {
+                        "type": "string"
+                      },
+                      "betydelse": {
+                        "type": "string"
+                      },
+                      "kalla": {
+                        "enum": [
+                          "egen_uppgift",
+                          "dokumenterat"
+                        ]
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "varde",
+                      "kalla"
+                    ]
+                  }
+                },
+                "belagg": {
+                  "enum": [
+                    "verifierat",
+                    "egen_uppgift"
+                  ]
+                },
+                "taggar": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "omfattning": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "text",
+                "belagg"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "arbetsgivare",
+          "titel",
+          "start",
+          "meriter"
+        ]
+      }
+    },
+    "utbildning": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "skola": {
+            "type": "string"
+          },
+          "program": {
+            "$ref": "#/$defs/Txt"
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{4}$"
+          },
+          "slut": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}$"
+          },
+          "merit": {
+            "$ref": "#/$defs/Txt"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "skola"
+        ]
+      }
+    },
+    "kurser": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "namn": {
+            "$ref": "#/$defs/Txt"
+          },
+          "utfardare": {
+            "type": "string"
+          },
+          "ar": {
+            "type": "string",
+            "pattern": "^\\d{4}$"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "namn"
+        ]
+      }
+    },
+    "sprak": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sprak": {
+            "type": "string"
+          },
+          "niva": {
+            "enum": [
+              "modersmål",
+              "flytande",
+              "god",
+              "grundläggande"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "sprak",
+          "niva"
+        ]
+      }
+    },
+    "kompetenser": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "namn": {
+            "$ref": "#/$defs/Txt"
+          },
+          "taxonomi_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "niva": {
+            "enum": [
+              "expert",
+              "van",
+              "grund"
+            ]
+          },
+          "taggar": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "namn"
+        ]
+      }
+    },
+    "ideella": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "organisation": {
+            "type": "string"
+          },
+          "roll": {
+            "$ref": "#/$defs/Txt"
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{4}$"
+          },
+          "slut": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}$"
+          },
+          "text": {
+            "$ref": "#/$defs/Txt"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "organisation"
+        ]
+      }
+    },
+    "referenser": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "namn": {
+            "type": "string"
+          },
+          "roll": {
+            "type": "string"
+          },
+          "kontakt": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "namn"
+        ]
+      }
+    },
+    "aldrig_pastaa": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "person",
+    "roller"
+  ],
+  "$defs": {
+    "Txt": {
+      "type": "object",
+      "properties": {
+        "sv": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Text på svenska och/eller engelska. Båda nycklarna är valfria."
+    }
+  }
+}

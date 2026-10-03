@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "jobbsok",
+  "displayName": "Jobbsök",
+  "version": "0.1.0",
+  "description": "Karriärcoach, faktabank, CV-design, jobbsökning och skräddarsydda ansökningar – allt lokalt i ~/Jobbsok/.",
+  "author": { "name": "Rotor" }
+}

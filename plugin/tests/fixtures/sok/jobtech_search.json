@@ -1,0 +1,350 @@
+{
+ "total": {
+  "value": 116
+ },
+ "positions": 563,
+ "query_time_in_millis": 2,
+ "result_time_in_millis": 14,
+ "freetext_concepts": {
+  "skill": [],
+  "occupation": [
+   "kommunikatör"
+  ],
+  "trait": [],
+  "location": [],
+  "skill_must": [],
+  "occupation_must": [],
+  "trait_must": [],
+  "location_must": [],
+  "skill_must_not": [],
+  "occupation_must_not": [],
+  "trait_must_not": [],
+  "location_must_not": []
+ },
+ "hits": [
+  {
+   "relevance": 1.0,
+   "id": "31531156",
+   "external_id": null,
+   "original_id": null,
+   "label": [],
+   "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/31531156",
+   "logo_url": "https://arbetsformedlingen.se/rest/employer-logo-api/api/v1/organisation/2321000073/logotyper/logo.png",
+   "headline": "Kommunikatör",
+   "application_deadline": "2026-10-11T23:59:59",
+   "number_of_vacancies": 1,
+   "description": {
+    "text": "Tycker du om att göra information lätt att förstå? Vi söker en person som vill vara med och bidra till att vår patientinformation blir ännu bättre. Som kommunikatör inom området får du möjlighet att hjälpa målgrupper att förstå och ta till sig kommunikation på olika sätt genom olika kanaler. Eftersom vi är mitt i ett omställningsarbete där vår patientinformation ska digitaliseras handlar uppdraget mycket om digital kommunikation och webbplatsen 1177.se är en viktig kanal. I tjänsten ingår också dialoger med vårdpersonal runt om i länet. Till din hjälp kommer du att ha flera kompetenta kommunikationskollegor med lång erfarenhet.\nOm dig\nSom person tycker du om att ta ansvar och hugger i där det behövs för att arbetet ska flyta på för alla inblandade. Du har god initiativkraft, jobbar strukturerat och är noggrann. Du kan leda och fördela arbetet tillsammans med dina kollegor samt prioritera och svara för snabba leveranser när det behövs. Vi ser gärna att du har jobbat med förändringskommunikation, kanske i ett digitaliseringsarbete eller någon annan form av verksamhetsutveckling. Att du har mycket god samarbetsförmåga, är pedagogisk och vill hjälpa andra är viktigt. Social kompetens o",
+    "text_formatted": "<p><p>Tycker du om att göra information lätt att förstå? Vi söker en person som vill vara med och bidra till att vår patientinformation blir ännu bättre. Som kommunikatör inom området får du möjlighet att hjälpa målgrupper att förstå och ta till sig kommunikation på olika sätt genom olika kanaler. Eftersom vi är mitt i ett omställningsarbete där vår patientinformation ska digitaliseras handlar uppdraget mycket om digital kommunikation och webbplatsen 1177.se är en viktig kanal. I tjänsten ingår också dialoger med vårdpersonal runt om i länet. Till din hjälp kommer du att ha flera kompetenta kommunikationskollegor med lång erfarenhet.</p><p><strong><strong>Om dig</strong></strong></p><p>Som person tycker du om att ta ansvar och hugger i där det behövs för att arbetet ska flyta på för alla inblandade. Du har god initiativkraft, jobbar strukturerat och är noggrann. Du kan leda och fördela arbetet tillsammans med dina kollegor samt prioritera och svara för snabba leveranser när det behövs. Vi ser gärna att du har jobbat med förändringskommunikation, kanske i ett digitaliseringsarbete eller någon annan form av verksamhetsutveckling. Att du har mycket god samarbetsförmåga, är pedagogisk ",
+    "company_information": null,
+    "needs": null,
+    "requirements": null,
+    "conditions": null
+   },
+   "employment_type": {
+    "concept_id": "PFZr_Syz_cUq",
+    "label": "Vanlig anställning",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "salary_type": {
+    "concept_id": "oG8G_9cW_nRf",
+    "label": "Fast månads- vecko- eller timlön",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "salary_description": null,
+   "duration": {
+    "concept_id": "a7uU_j21_mkL",
+    "label": "Tills vidare",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "working_hours_type": {
+    "concept_id": "6YE1_gAC_R2G",
+    "label": "Heltid",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "scope_of_work": {
+    "min": 100,
+    "max": 100
+   },
+   "access": null,
+   "employer": {
+    "phone_number": null,
+    "email": null,
+    "url": "https://regionkalmar.se/",
+    "organization_number": "2321000073",
+    "name": "REGION KALMAR LÄN",
+    "workplace": "Regionstab"
+   },
+   "application_details": {
+    "information": null,
+    "reference": null,
+    "email": null,
+    "via_af": false,
+    "url": "https://regionkalmar.varbi.com/se/what:job/jobID:968544/type:job/where:125/apply:1",
+    "other": null
+   },
+   "experience_required": true,
+   "access_to_own_car": false,
+   "driving_license_required": true,
+   "driving_license": [
+    {
+     "concept_id": "VTK8_WRx_GcM",
+     "label": "B",
+     "legacy_ams_taxonomy_id": "3"
+    }
+   ],
+   "occupation": {
+    "concept_id": "aRp4_qjZ_tPV",
+    "label": "Informatör/Kommunikatör",
+    "legacy_ams_taxonomy_id": "6159"
+   },
+   "occupation_group": {
+    "concept_id": "k1Nx_auG_sNh",
+    "label": "Informatörer, kommunikatörer och PR-specialister",
+    "legacy_ams_taxonomy_id": "2432"
+   },
+   "occupation_field": {
+    "concept_id": "X82t_awd_Qyc",
+    "label": "Administration, ekonomi, juridik",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "workplace_model": {
+    "concept_id": null,
+    "label": null
+   },
+   "workplace_address": {
+    "municipality": "Kalmar",
+    "municipality_code": "0880",
+    "municipality_concept_id": "Pnmg_SgP_uHQ",
+    "region": "Kalmar län",
+    "region_code": "08",
+    "region_concept_id": "9QUH_2bb_6Np",
+    "country": "Sverige",
+    "country_code": "199",
+    "country_concept_id": "i46j_HmG_v64",
+    "street_address": "Strömgatan 13",
+    "postcode": "39232",
+    "city": "Kalmar",
+    "coordinates": [
+     16.36134059363653,
+     56.66283413898016
+    ]
+   },
+   "workplace_addresses": [
+    {
+     "municipality": "Kalmar",
+     "municipality_code": "0880",
+     "municipality_concept_id": "Pnmg_SgP_uHQ",
+     "region": "Kalmar län",
+     "region_code": "08",
+     "region_concept_id": "9QUH_2bb_6Np",
+     "country": "Sverige",
+     "country_code": "199",
+     "country_concept_id": "i46j_HmG_v64",
+     "street_address": "Strömgatan 13",
+     "postcode": "39232",
+     "city": "Kalmar",
+     "coordinates": [
+      16.36134059363653,
+      56.66283413898016
+     ]
+    }
+   ],
+   "must_have": {
+    "skills": [],
+    "languages": [],
+    "work_experiences": [],
+    "education": [],
+    "education_level": []
+   },
+   "nice_to_have": {
+    "skills": [],
+    "languages": [],
+    "work_experiences": [
+     {
+      "weight": 5,
+      "concept_id": "aRp4_qjZ_tPV",
+      "label": "Informatör/Kommunikatör",
+      "legacy_ams_taxonomy_id": "6159"
+     }
+    ],
+    "education": [],
+    "education_level": []
+   },
+   "application_contacts": [
+    {
+     "name": "Lina Isaksson",
+     "description": null,
+     "email": "lina.isaksson@regionkalmar.se",
+     "telephone": "010-3584259",
+     "contact_type": "Kommunikationsdirektör"
+    }
+   ],
+   "publication_date": "2026-09-29T10:50:22",
+   "last_publication_date": "2026-10-11T23:59:59",
+   "removed": false,
+   "removed_date": null,
+   "source_type": "VIA_JOBPOSTING",
+   "timestamp": 1790671822382
+  },
+  {
+   "relevance": 1.0,
+   "id": "31526913",
+   "external_id": null,
+   "original_id": null,
+   "label": [],
+   "webpage_url": "https://arbetsformedlingen.se/platsbanken/annonser/31526913",
+   "logo_url": "https://arbetsformedlingen.se/rest/employer-logo-api/api/v1/organisation/2120002148/logotyper/logo.png",
+   "headline": "Kommunikatör",
+   "application_deadline": "2026-10-18T23:59:59",
+   "number_of_vacancies": 1,
+   "description": {
+    "text": "Malung-Sälens kommun har ca 10 000 invånare och ligger i natursköna Dalarna, hit kan du flyga till och från vår internationella flygplats i Sälen. Sälenfjällen gör oss till världens fjärde största vinterdestination. Malung- Sälens fantastiska natur, stora evenemang och upplevelser gör att vi bland annat kan erbjuda dig livskvalitet, möjligheter till ett aktivt friluftsliv och en trygg miljö för barn att växa upp i.\n\nMalung-Sälens medarbetare är nyckeln till framgång, därför vill vi skapa de bästa förutsättningarna för ett hållbart arbetsliv, för att du ska trivas, må bra och känna arbetsglädje. Som anställd hos oss erbjuder vi en rad förmåner bland annat:\n\n\t• Friskvårdsbidrag eller friskvårdtimme där verksamheten tillåter\n\t• Flexibla arbetstider när det är möjligt\n\t• Som folkbokförd i kommunen har man möjlighet att arrendera jakträtt i ett av viltvårdsområdena där kommunen har jakträtt.\n\nSom kommunikatör i Malung-Sälens kommun blir du en del av kommunikationsfunktionen och arbetar nära verksamheterna för att säkerställa tydlig, tillgänglig och förtroendeskapande kommunikation. Kommunen står inför flera viktiga utvecklingsfrågor och du har en central roll i att synliggöra kommunens ",
+    "text_formatted": "Malung-Sälens kommun har ca 10 000 invånare och ligger i natursköna Dalarna, hit kan du flyga till och från vår internationella flygplats i Sälen. Sälenfjällen gör oss till världens fjärde största vinterdestination. Malung- Sälens fantastiska natur, stora evenemang och upplevelser gör att vi bland annat kan erbjuda dig livskvalitet, möjligheter till ett aktivt friluftsliv och en trygg miljö för barn att växa upp i.\n\nMalung-Sälens medarbetare är nyckeln till framgång, därför vill vi skapa de bästa förutsättningarna för ett hållbart arbetsliv, för att du ska trivas, må bra och känna arbetsglädje. Som anställd hos oss erbjuder vi en rad förmåner bland annat:\n\n\t• Friskvårdsbidrag eller friskvårdtimme där verksamheten tillåter\n\t• Flexibla arbetstider när det är möjligt\n\t• Som folkbokförd i kommunen har man möjlighet att arrendera jakträtt i ett av viltvårdsområdena där kommunen har jakträtt.\n\nSom kommunikatör i Malung-Sälens kommun blir du en del av kommunikationsfunktionen och arbetar nära verksamheterna för att säkerställa tydlig, tillgänglig och förtroendeskapande kommunikation. Kommunen står inför flera viktiga utvecklingsfrågor och du har en central roll i att synliggöra kommunens ",
+    "company_information": null,
+    "needs": null,
+    "requirements": null,
+    "conditions": null
+   },
+   "employment_type": {
+    "concept_id": "PFZr_Syz_cUq",
+    "label": "Vanlig anställning",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "salary_type": {
+    "concept_id": "oG8G_9cW_nRf",
+    "label": "Fast månads- vecko- eller timlön",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "salary_description": null,
+   "duration": {
+    "concept_id": "a7uU_j21_mkL",
+    "label": "Tills vidare",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "working_hours_type": {
+    "concept_id": "6YE1_gAC_R2G",
+    "label": "Heltid",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "scope_of_work": {
+    "min": 100,
+    "max": 100
+   },
+   "access": null,
+   "employer": {
+    "phone_number": null,
+    "email": null,
+    "url": "https://www.youtube.com/watch?si=tjtFJyx27TaFndW1&v=lqD_yyd2CIU&feature=youtu.be",
+    "organization_number": "2120002148",
+    "name": "Malung-Sälens kommun",
+    "workplace": "Malung-Sälens kommun"
+   },
+   "application_details": {
+    "information": null,
+    "reference": "C346589",
+    "email": null,
+    "via_af": false,
+    "url": "https://recruit.visma.com/spa/public/apply?guidAssignment=3ecd6d99-4c92-4b45-9285-bb2b29c41034&publishCode=PB&TK=b925ca2b-6090-47d8-8800-041fc7cbf3b7",
+    "other": null
+   },
+   "experience_required": true,
+   "access_to_own_car": false,
+   "driving_license_required": true,
+   "driving_license": null,
+   "occupation": {
+    "concept_id": "aRp4_qjZ_tPV",
+    "label": "Informatör/Kommunikatör",
+    "legacy_ams_taxonomy_id": "6159"
+   },
+   "occupation_group": {
+    "concept_id": "k1Nx_auG_sNh",
+    "label": "Informatörer, kommunikatörer och PR-specialister",
+    "legacy_ams_taxonomy_id": "2432"
+   },
+   "occupation_field": {
+    "concept_id": "X82t_awd_Qyc",
+    "label": "Administration, ekonomi, juridik",
+    "legacy_ams_taxonomy_id": "1"
+   },
+   "workplace_model": {
+    "concept_id": null,
+    "label": null
+   },
+   "workplace_address": {
+    "municipality": "Malung-Sälen",
+    "municipality_code": "2023",
+    "municipality_concept_id": "FPCd_poj_3tq",
+    "region": "Dalarnas län",
+    "region_code": "20",
+    "region_concept_id": "oDpK_oZ2_WYt",
+    "country": "Sverige",
+    "country_code": "199",
+    "country_concept_id": "i46j_HmG_v64",
+    "street_address": "Box 14",
+    "postcode": "78221",
+    "city": "Malung",
+    "coordinates": [
+     13.7121945,
+     60.6834525
+    ]
+   },
+   "workplace_addresses": [
+    {
+     "municipality": "Malung-Sälen",
+     "municipality_code": "2023",
+     "municipality_concept_id": "FPCd_poj_3tq",
+     "region": "Dalarnas län",
+     "region_code": "20",
+     "region_concept_id": "oDpK_oZ2_WYt",
+     "country": "Sverige",
+     "country_code": "199",
+     "country_concept_id": "i46j_HmG_v64",
+     "street_address": "Box 14",
+     "postcode": "78221",
+     "city": "Malung",
+     "coordinates": [
+      13.7121945,
+      60.6834525
+     ]
+    }
+   ],
+   "must_have": {
+    "skills": [],
+    "languages": [],
+    "work_experiences": [],
+    "education": [],
+    "education_level": []
+   },
+   "nice_to_have": {
+    "skills": [],
+    "languages": [],
+    "work_experiences": [],
+    "education": [],
+    "education_level": []
+   },
+   "application_contacts": [
+    {
+     "name": "Christina   Holback",
+     "description": null,
+     "email": "christina.holback@malung-salen.se",
+     "telephone": "+4628018132",
+     "contact_type": "Kommunchef"
+    },
+    {
+     "name": "Frida   Liljequist",
+     "description": null,
+     "email": "frida.liljequist@malung-salen.se",
+     "telephone": null,
+     "contact_type": "Kommunikationschef"
+    }
+   ],
+   "publication_date": "2026-09-28T12:25:05",
+   "last_publication_date": "2026-10-18T23:59:59",
+   "removed": false,
+   "removed_date": null,
+   "source_type": "VIA_JOBPOSTING",
+   "timestamp": 1790591105901
+  }
+ ]
+}

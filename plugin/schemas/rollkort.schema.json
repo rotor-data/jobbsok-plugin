@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/rollkort.schema.json",
+  "title": "Rollkort (sok/rollkort/<slug>.json)",
+  "description": "En tänkbar riktning. Varje fält är {varde, kallor}. Det som saknar källa stryks (rollkort.py kontrollera).",
+  "type": "object",
+  "required": ["schema_version", "slug", "typ", "titel"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "slug": {"type": "string", "pattern": "^[a-z0-9åäöéü-]+$"},
+    "typ": {"enum": ["marknad", "stanna"]},
+    "titel": {"type": "string"},
+    "skapad": {"type": "string"},
+    "uppdaterad": {"type": "string"},
+    "roll": {"type": "object"},
+    "region": {"type": "object"},
+    "underlag": {"type": "object"},
+    "titlar": {"$ref": "#/$defs/falt"},
+    "arbetsgivare": {"$ref": "#/$defs/falt"},
+    "volym": {"$ref": "#/$defs/falt"},
+    "arbetsuppgifter": {"$ref": "#/$defs/falt"},
+    "krav": {"$ref": "#/$defs/falt"},
+    "annonser": {"$ref": "#/$defs/falt"},
+    "lon": {"$ref": "#/$defs/falt"},
+    "lon_fack": {"$ref": "#/$defs/falt"},
+    "yrkesklassning": {"$ref": "#/$defs/falt"},
+    "glapp": {"$ref": "#/$defs/falt"},
+    "crafting": {"$ref": "#/$defs/falt"},
+    "vanlig_tisdag": {"$ref": "#/$defs/falt"},
+    "passar_for_att": {"$ref": "#/$defs/citatfalt"},
+    "skav": {"$ref": "#/$defs/citatfalt"},
+    "kultur": {"$ref": "#/$defs/krok"},
+    "ledarskap": {"$ref": "#/$defs/krok"},
+    "arbetsidentitet": {"$ref": "#/$defs/krok"}
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "kalla": {
+      "type": "object",
+      "required": ["typ"],
+      "properties": {
+        "typ": {"enum": ["jobtech_historical", "jobtech_search", "taxonomi", "scb", "coach", "det_har_vet_vi",
+                         "preferenser", "fakta", "arbetsuppgift", "annons", "forskning", "arbetsgivarkort", "webb", "manuell"]},
+        "url": {"type": "string"},
+        "parametrar": {"type": ["object", "null"]},
+        "datum": {"type": "string"},
+        "annons_id": {"type": "array", "items": {"type": "string"}},
+        "fil": {"type": "string"},
+        "fas": {"type": "string"},
+        "falt": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "falt": {
+      "type": "object",
+      "required": ["varde", "kallor"],
+      "properties": {
+        "kallor": {"type": "array", "items": {"$ref": "#/$defs/kalla"}},
+        "status": {"enum": ["vantar", "ifylld"]},
+        "todo": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "citatfalt": {
+      "type": "object",
+      "required": ["varde", "kallor"],
+      "properties": {
+        "varde": {"type": "array", "items": {
+          "type": "object",
+          "required": ["text", "citat", "fas"],
+          "properties": {"text": {"type": "string"}, "citat": {"type": "string"}, "fas": {"type": "string"}, "falt": {"type": "string"}},
+          "additionalProperties": false
+        }},
+        "kallor": {"type": "array", "items": {"$ref": "#/$defs/kalla"}}
+      },
+      "additionalProperties": true
+    },
+    "krok": {
+      "type": "object",
+      "required": ["varde", "kallor", "status"],
+      "properties": {
+        "status": {"enum": ["vantar", "ifylld"]},
+        "kallor": {"type": "array", "items": {"$ref": "#/$defs/kalla"}},
+        "forvantat": {"type": "object"},
+        "research": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/coach.schema.json",
+  "title": "Coachresultat (profil/coach.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "faser": {
+      "type": "object",
+      "properties": {
+        "intake": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "arbetsidentitet": {
+              "type": "object",
+              "properties": {
+                "jag_pa_jobbet_mening": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "best_self_teman": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                },
+                "roller": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "energy_log": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "needs_profile": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "kultur_profil": {
+              "type": "object",
+              "description": "Kultur-Q-sort, references/kultur-qsort.md",
+              "properties": {
+                "instrument": {
+                  "type": "string"
+                },
+                "datum": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ideal": {
+                  "type": "object",
+                  "properties": {
+                    "arbetsplats": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "topp": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^s([1-9]|1[0-8])$"
+                      },
+                      "maxItems": 4
+                    },
+                    "botten": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^s([1-9]|1[0-8])$"
+                      },
+                      "maxItems": 4
+                    }
+                  },
+                  "additionalProperties": true
+                },
+                "senaste_jobb": {
+                  "type": "object",
+                  "properties": {
+                    "arbetsplats": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "topp": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^s([1-9]|1[0-8])$"
+                      },
+                      "maxItems": 4
+                    },
+                    "botten": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^s([1-9]|1[0-8])$"
+                      },
+                      "maxItems": 4
+                    }
+                  },
+                  "additionalProperties": true
+                },
+                "storsta_glapp": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sats": {
+                        "type": "string",
+                        "pattern": "^s([1-9]|1[0-8])$"
+                      },
+                      "ideal": {
+                        "enum": [
+                          1,
+                          2,
+                          3
+                        ]
+                      },
+                      "senaste": {
+                        "enum": [
+                          1,
+                          2,
+                          3
+                        ]
+                      },
+                      "hennes_ord": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "sats"
+                    ],
+                    "additionalProperties": true
+                  }
+                },
+                "insikter": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "dealbreakers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": true
+            },
+            "ledarskap_eget": {
+              "type": "object",
+              "properties": {
+                "ansvar_vilja": {
+                  "type": "object",
+                  "properties": {
+                    "personal_0_10": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0,
+                      "maximum": 10
+                    },
+                    "sak_0_10": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0,
+                      "maximum": 10
+                    },
+                    "inget_0_10": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0,
+                      "maximum": 10
+                    }
+                  },
+                  "additionalProperties": true
+                },
+                "informella_exempel": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "situation": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "vad_hon_gjorde": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "andras_reaktion": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "till_faktabanken": {
+                        "type": "boolean"
+                      },
+                      "faktabank_status": {
+                        "enum": [
+                          "flaggad",
+                          "bekraftad",
+                          "avbojd",
+                          null
+                        ]
+                      },
+                      "fakta_id": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                }
+              },
+              "additionalProperties": true
+            },
+            "ledarskap_behov": {
+              "type": "object",
+              "properties": {
+                "chefsegenskaper_rangordnade": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "tillganglig",
+                      "ger_riktning",
+                      "ger_frihet",
+                      "skyddar",
+                      "utvecklar"
+                    ]
+                  }
+                },
+                "avstamning_frekvens": {
+                  "enum": [
+                    "dagligen",
+                    "veckovis",
+                    "varannan_vecka",
+                    "vid_behov",
+                    null
+                  ]
+                },
+                "aldrig_igen": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "options": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "experiments": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "decision": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "aktuell_fas": {
+          "enum": [
+            "intake",
+            "identity",
+            "energy_log",
+            "needs_profile",
+            "options",
+            "experiments",
+            "decision",
+            "klar"
+          ]
+        },
+        "senast": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "aktuell_fas"
+      ]
+    },
+    "uppfoljning": {
+      "type": "object",
+      "description": "Baslinje (fas 1), efter fas 7, och valfritt efter 3/6 månader i nytt jobb",
+      "properties": {
+        "baslinje": {
+          "type": "object",
+          "properties": {
+            "datum": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "klarhet_0_10": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            },
+            "tilltro_0_10": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            },
+            "nojdhet_nu_0_10": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            },
+            "forstadd_0_10": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            }
+          },
+          "additionalProperties": true
+        },
+        "efter_coachning": {
+          "type": "object",
+          "properties": {
+            "datum": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "klarhet_0_10": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            },
+            "tilltro_0_10": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            },
+            "nojdhet_nu_0_10": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            },
+            "forstadd_0_10": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            }
+          },
+          "additionalProperties": true
+        },
+        "nytt_jobb": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "manad": {
+                "type": "integer"
+              },
+              "trivsel_0_10": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 10
+              },
+              "chef_utrymme_0_10": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 10
+              },
+              "valja_igen": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "faser",
+    "status"
+  ]
+}

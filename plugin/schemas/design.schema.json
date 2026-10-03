@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/design.schema.json",
+  "title": "CV-design (design/design.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "version": {
+      "type": "integer"
+    },
+    "namn": {
+      "type": "string"
+    },
+    "layout": {
+      "anyOf": [
+        {
+          "enum": [
+            "klassisk",
+            "sidokolumn",
+            "kompakt",
+            "portratt"
+          ]
+        },
+        {
+          "type": "string",
+          "pattern": "^egen:[a-z0-9-]+$"
+        }
+      ],
+      "description": "Inbyggd layout, eller egen:<namn> = egen mall i design/mallar/<namn>/ (från Claude Design)."
+    },
+    "tokens": {
+      "type": "object",
+      "properties": {
+        "font_rubrik": {
+          "type": "string"
+        },
+        "font_brod": {
+          "type": "string"
+        },
+        "storlek_brod_pt": {
+          "type": "number"
+        },
+        "storlek_namn_pt": {
+          "type": "number"
+        },
+        "storlek_rubrik_pt": {
+          "type": "number"
+        },
+        "radavstand": {
+          "type": "number"
+        },
+        "farg_text": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "farg_accent": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "farg_dampad": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "marginal_mm": {
+          "type": "number"
+        },
+        "sektion_luft_mm": {
+          "type": "number"
+        },
+        "visa_foto": {
+          "type": "boolean"
+        },
+        "rubrik_stil": {
+          "enum": [
+            "linje",
+            "versaler",
+            "vanlig",
+            "accentstreck"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "sektioner": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "profil",
+          "erfarenhet",
+          "utbildning",
+          "kompetenser",
+          "sprak",
+          "kurser",
+          "ideella",
+          "referenser",
+          "ovrigt"
+        ]
+      }
+    },
+    "varianter": {
+      "type": "object",
+      "description": "Varianter av samma design, t.ex. stram/standard/kreativ. Väljs per ansökan med cv.json.design_variant.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "layout": {
+            "anyOf": [
+              {
+                "enum": [
+                  "klassisk",
+                  "sidokolumn",
+                  "kompakt",
+                  "portratt"
+                ]
+              },
+              {
+                "type": "string",
+                "pattern": "^egen:[a-z0-9-]+$"
+              }
+            ],
+            "description": "Inbyggd layout, eller egen:<namn> = egen mall i design/mallar/<namn>/ (från Claude Design)."
+          },
+          "token_overrides": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "sektioner": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "profil",
+                "erfarenhet",
+                "utbildning",
+                "kompetenser",
+                "sprak",
+                "kurser",
+                "ideella",
+                "referenser",
+                "ovrigt"
+              ]
+            }
+          },
+          "beskrivning": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "standardvariant": {
+      "type": "string"
+    },
+    "historik": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer"
+          },
+          "datum": {
+            "type": "string"
+          },
+          "andring": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "version"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "version",
+    "layout",
+    "tokens",
+    "sektioner"
+  ]
+}

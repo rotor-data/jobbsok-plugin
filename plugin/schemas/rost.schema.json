@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/rost.schema.json",
+  "title": "Röst (profil/rost.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "gillade_formuleringar": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "aldrig_ord": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tonblandningar": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "namn": {
+            "type": "string"
+          },
+          "personas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "namn": {
+                  "type": "string"
+                },
+                "vikt": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "namn"
+              ]
+            }
+          },
+          "anvand_till": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "namn",
+          "personas"
+        ]
+      }
+    },
+    "smyra": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version"
+  ]
+}

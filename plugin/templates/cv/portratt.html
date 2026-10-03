@@ -1,0 +1,13 @@
+{% include "_topp.html" %}<body class="lay-portratt stil-{{ rubrik_stil }}">
+<main class="sida">
+<header class="huvud">
+<div class="huvud-text">
+<h1 class="namn">{{ person.namn }}</h1>
+{% if person.titel %}<p class="yrkestitel">{{ person.titel }}</p>{% endif %}
+{% include "_kontakt.html" %}</div>
+{% if person.foto %}<img class="foto" src="{{ person.foto }}" alt="{{ person.namn }}">{% endif %}
+</header>
+{% for s in sektioner %}{% include "_sektion.html" %}{% endfor %}
+</main>
+</body>
+</html>

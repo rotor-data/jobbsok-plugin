@@ -1,0 +1,585 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/beslut.schema.json",
+  "title": "Beslut vid erbjudande (ansokningar/<mapp>/beslut.json)",
+  "type": "object",
+  "$defs": {
+    "qsort": {
+      "type": "object",
+      "properties": {
+        "instrument": {
+          "type": "string"
+        },
+        "topp": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4
+        },
+        "botten": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4
+        },
+        "kalla": {
+          "type": "string"
+        },
+        "sakerhet": {
+          "enum": [
+            "lag",
+            "medel",
+            "hog",
+            null
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+    },
+    "uppdaterad": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+    },
+    "alternativ": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^a\\d+$"
+          },
+          "typ": {
+            "enum": [
+              "erbjudande",
+              "stanna",
+              "fortsatta_soka"
+            ]
+          },
+          "mapp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "bolag": {
+            "type": "string"
+          },
+          "roll": {
+            "type": "string"
+          },
+          "rollkort": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "arbetsgivarkort": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "villkor": {
+            "type": "object",
+            "properties": {
+              "lon_manad": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "anstallningsform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "omfattning": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "start": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+              },
+              "slut": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+              },
+              "pendling_min": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "pendling_satt": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "pendling_belagg": {
+                "enum": [
+                  "provat",
+                  "beraknat",
+                  "uppgift",
+                  "okant",
+                  null
+                ]
+              },
+              "resdagar_manad": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "distans_dagar": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "ovrigt": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "typ"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "dimensioner": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "enum": [
+              "kultur",
+              "ledarskap",
+              "arbetsdag",
+              "harda_granser",
+              "lon",
+              "utveckling"
+            ]
+          },
+          "ideal": {
+            "type": "string"
+          },
+          "ideal_kalla": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "per_alternativ": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "alternativ": {
+                  "type": "string"
+                },
+                "beskrivning": {
+                  "type": "string"
+                },
+                "mot_ideal": {
+                  "enum": [
+                    "nara",
+                    "delvis",
+                    "langt",
+                    "okant"
+                  ]
+                },
+                "belagg": {
+                  "enum": [
+                    "egen_upplevelse",
+                    "intervju",
+                    "arbetsgivarkort",
+                    "annons",
+                    "scb",
+                    "rollkort",
+                    "coach",
+                    "antagande"
+                  ]
+                },
+                "kallor": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "alternativ",
+                "mot_ideal"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "dimension",
+          "per_alternativ"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "lon": {
+      "type": "object",
+      "properties": {
+        "ssyk": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scb_manadslon_medel": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ar": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sektor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kalla": {
+          "type": "string"
+        },
+        "lonegolv": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "per_alternativ": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "alternativ": {
+                "type": "string"
+              },
+              "lon_manad": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "diff_scb_kr": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "diff_scb_pct": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "over_golv": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "alternativ"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "harda_granser_brott": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "alternativ": {
+            "type": "string"
+          },
+          "grans": {
+            "type": "string"
+          },
+          "varde": {
+            "type": "string"
+          },
+          "hennes_beslut": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "alternativ",
+          "grans"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "ambivalens": {
+      "type": "object",
+      "properties": {
+        "for": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "alternativ": {
+                "type": "string"
+              },
+              "hennes_ord": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "hennes_ord"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "emot": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "alternativ": {
+                "type": "string"
+              },
+              "hennes_ord": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "hennes_ord"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "beslutssakerhet_0_10": {
+          "type": [
+            "integer",
+            "number",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "prognosfel": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "flagga": {
+            "enum": [
+              "titel",
+              "lon",
+              "fokalism",
+              "impact",
+              "pendling",
+              "chef"
+            ]
+          },
+          "iakttagelse": {
+            "type": "string"
+          },
+          "hennes_svar": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "flagga"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "forhandling": {
+      "type": "object",
+      "properties": {
+        "alternativ": {
+          "type": "string"
+        },
+        "mal_lon": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "golv": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "underlag": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kalla": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "formuleringar": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ovriga_villkor": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "utfall": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "beslut": {
+      "type": "object",
+      "properties": {
+        "val": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "datum": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+        },
+        "hennes_ord": {
+          "type": "string"
+        },
+        "nasta_steg": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "prognos": {
+      "type": "object",
+      "properties": {
+        "trivsel_0_10": {
+          "type": [
+            "integer",
+            "number",
+            "null"
+          ]
+        },
+        "chef_utrymme_0_10": {
+          "type": [
+            "integer",
+            "number",
+            "null"
+          ]
+        },
+        "kultur_qsort": {
+          "$ref": "#/$defs/qsort"
+        }
+      },
+      "additionalProperties": false
+    },
+    "uppfoljning_paminnelser": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "manad": {
+            "enum": [
+              3,
+              6
+            ]
+          },
+          "datum": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+          },
+          "schemalagd": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "manad"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "alternativ"
+  ]
+}

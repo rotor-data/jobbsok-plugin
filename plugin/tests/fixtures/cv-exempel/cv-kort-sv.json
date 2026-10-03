@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "sprak": "sv",
+  "design_version": 1,
+  "person": {
+    "namn": "Maja Lindqvist",
+    "titel": "Projektledare inom kommunikation",
+    "ort": "Uppsala",
+    "epost": "maja.lindqvist@example.se",
+    "telefon": "070-123 45 67",
+    "lankar": [
+      {
+        "etikett": "LinkedIn",
+        "url": "https://www.linkedin.com/in/majalindqvist-exempel"
+      }
+    ],
+    "foto": "foto.svg"
+  },
+  "profil": "Projektledare med åtta års erfarenhet av intern kommunikation i offentlig sektor. Jag gör komplexa förändringar begripliga och får ledningsgrupper och medarbetare att dra åt samma håll.",
+  "sektioner": [
+    {
+      "typ": "erfarenhet",
+      "rubrik": "Erfarenhet",
+      "poster": [
+        {
+          "titel": "Kommunikationsstrateg",
+          "organisation": "Region Uppsala",
+          "ort": "Uppsala",
+          "period": "2021 – nu",
+          "punkter": [
+            "Ledde kommunikationen kring nytt journalsystem för 9 000 medarbetare",
+            "Byggde om intranätets startsida; besöken ökade med 40 %"
+          ],
+          "kalla": [
+            "r1-m1",
+            "r1-m2"
+          ]
+        },
+        {
+          "titel": "Kommunikatör",
+          "organisation": "Uppsala kommun",
+          "ort": "Uppsala",
+          "period": "2017 – 2021",
+          "punkter": [
+            "Ansvarade för nyhetsbrevet till 12 000 prenumeranter"
+          ],
+          "kalla": [
+            "r2-m1"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "utbildning",
+      "rubrik": "Utbildning",
+      "poster": [
+        {
+          "titel": "Medie- och kommunikationsvetenskap, kandidat",
+          "organisation": "Uppsala universitet",
+          "period": "2014 – 2017"
+        }
+      ]
+    },
+    {
+      "typ": "lista",
+      "rubrik": "Kompetenser",
+      "grupper": [
+        {
+          "etikett": "Kommunikation",
+          "poster": [
+            "Förändringskommunikation",
+            "Klarspråk",
+            "Intranät"
+          ]
+        },
+        {
+          "etikett": "Verktyg",
+          "poster": [
+            "SiteVision",
+            "Canva",
+            "Microsoft 365"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "lista",
+      "rubrik": "Språk",
+      "grupper": [
+        {
+          "etikett": "",
+          "poster": [
+            "Svenska (modersmål)",
+            "Engelska (flytande)"
+          ]
+        }
+      ]
+    }
+  ]
+}

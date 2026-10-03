@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "person": {
+    "namn": "Lina Testsson",
+    "titel": {"sv": "Projektledare inom kommunikation", "en": "Communications Project Manager"},
+    "ort": "Uppsala",
+    "epost": "lina.testsson@example.com",
+    "telefon": "070-000 00 00",
+    "lankar": [{"etikett": "LinkedIn", "url": "https://www.linkedin.com/in/exempel-lina"}],
+    "foto": null,
+    "korkort": "B"
+  },
+  "sammanfattning_rad": {"sv": "Projektledare som gör krångliga budskap begripliga och får grupper att leverera i tid.", "en": "Project manager who makes complex messages clear and gets teams to deliver on time."},
+  "roller": [
+    {
+      "id": "r1", "arbetsgivare": "Region Exempel", "titel": {"sv": "Kommunikationsstrateg", "en": "Communications Strategist"},
+      "ort": "Uppsala", "start": "2021-03", "slut": null,
+      "beskrivning": {"sv": "Ansvar för intern och extern kommunikation inom vårdförvaltningen.", "en": "Responsible for internal and external communications in the healthcare division."},
+      "meriter": [
+        {"id": "r1-m1", "text": {"sv": "Ledde omläggningen av intranätet och minskade antalet supportärenden med 30 %.", "en": "Led the intranet relaunch and cut support tickets by 30%."},
+         "kort": {"sv": "Ledde ny intranätlansering", "en": "Led intranet relaunch"},
+         "siffror": [{"varde": "30 %", "betydelse": "färre supportärenden", "kalla": "dokumenterat"}],
+         "belagg": "verifierat", "taggar": ["projektledning", "intranät"], "omfattning": "team 6 pers"},
+        {"id": "r1-m2", "text": {"sv": "Skrev om patientinformation i klarspråk tillsammans med fem vårdenheter.", "en": "Rewrote patient information in plain language with five care units."},
+         "siffror": [], "belagg": "egen_uppgift", "taggar": ["klarspråk"], "omfattning": "5 enheter"}
+      ]
+    },
+    {
+      "id": "r2", "arbetsgivare": "Byrån AB", "titel": {"sv": "Projektledare", "en": "Project Manager"},
+      "ort": "Stockholm", "start": "2017-08", "slut": "2021-02",
+      "beskrivning": {"sv": "Projektledning av kampanjer för kunder i offentlig sektor."},
+      "meriter": [
+        {"id": "r2-m1", "text": {"sv": "Drev tolv kampanjer från brief till lansering inom budget.", "en": "Ran twelve campaigns from brief to launch on budget."},
+         "siffror": [{"varde": "12", "betydelse": "kampanjer", "kalla": "egen_uppgift"}],
+         "belagg": "egen_uppgift", "taggar": ["kampanj"], "omfattning": "budget upp till 2 mkr"}
+      ]
+    },
+    {
+      "id": "r3", "arbetsgivare": "Föreningen Läsglädje", "titel": {"sv": "Kommunikatör", "en": "Communications Officer"},
+      "ort": "Uppsala", "start": "2014-09", "slut": "2017-07",
+      "meriter": [
+        {"id": "r3-m1", "text": {"sv": "Startade föreningens nyhetsbrev och byggde upp det till 4 000 prenumeranter."},
+         "siffror": [{"varde": "4 000", "betydelse": "prenumeranter", "kalla": "egen_uppgift"}],
+         "belagg": "egen_uppgift", "taggar": ["nyhetsbrev"]}
+      ]
+    }
+  ],
+  "utbildning": [{"id": "u1", "skola": "Uppsala universitet", "program": {"sv": "Medie- och kommunikationsvetenskap", "en": "Media and Communication Studies"}, "start": "2011", "slut": "2014"}],
+  "kurser": [{"id": "k1", "namn": {"sv": "Klarspråk i praktiken"}, "utfardare": "Språkrådet", "ar": "2022"}],
+  "sprak": [{"sprak": "Svenska", "niva": "modersmål"}, {"sprak": "Engelska", "niva": "flytande"}],
+  "kompetenser": [
+    {"id": "c1", "namn": {"sv": "Projektledning", "en": "Project management"}, "taxonomi_id": null, "niva": "expert", "taggar": []},
+    {"id": "c2", "namn": {"sv": "Klarspråk", "en": "Plain language"}, "taxonomi_id": null, "niva": "van", "taggar": []}
+  ],
+  "ideella": [],
+  "referenser": [{"namn": "Anna Exempel", "roll": "Kommunikationschef", "kontakt": "anna@example.com", "relation": "närmaste chef 2021–"}],
+  "aldrig_pastaa": ["Ingen personalansvar har hon haft formellt", "Inte certifierad projektledare (IPMA/PMP)"]
+}

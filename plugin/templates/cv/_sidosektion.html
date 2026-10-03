@@ -1,0 +1,4 @@
+<section class="sektion {{ s.nyckel }}">
+<h2>{{ s.rubrik }}</h2>
+{% for g in s.grupper %}<div class="grupp">{% if g.etikett %}<span class="grupp-etikett">{{ g.etikett }}</span>{% endif %}<ul class="lista">{% for x in g.poster %}<li>{{ x }}</li>{% endfor %}</ul></div>
+{% endfor %}</section>

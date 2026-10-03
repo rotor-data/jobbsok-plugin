@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:tt="https://teamtailor.com/locations">
+  <channel>
+    <title>Teamtailor</title>
+    <description>Current job openings</description>
+    <link>https://career.teamtailor.com/jobs</link>
+    <item>
+      <title>UK Account Executive - SMB</title>
+      <description>&lt;h4&gt;Let's build the future together!&lt;/h4&gt;&lt;p&gt;&lt;a target="_blank" href="https://www.teamtailor.com/en/"&gt;Teamtailor&lt;/a&gt; is an Employer Branding and an ATS SaaS platform used by over 13,000 companies, 250.000 users in 90 countries around the world.&lt;/p&gt;&lt;p&gt;Working at Teamtailor means working at a global, international, and fast-paced tech company that offers an ideal workplace for those who want to have a real impact on the growth of an organisation and are craving for responsibilities. It also means having lots of fun!!! 🥳&lt;/p&gt;&lt;p&gt;&lt;span style="font-size:1em;font-weight:initial;letter-spacing:-0.011em;"</description>
+      <pubDate>Fri, 24 Jul 2026 09:05:16 +0200</pubDate>
+      <link>https://career.teamtailor.com/jobs/8118064-uk-account-executive-smb</link>
+      <remoteStatus>hybrid</remoteStatus>
+      <guid>4ff07fd5-3ac0-4333-8f4c-955380396321</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>London</tt:name>
+          <tt:address>16 Laystall Court</tt:address>
+          <tt:zip>EC1R 4</tt:zip>
+          <tt:city>London</tt:city>
+          <tt:country>United Kingdom</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Sales</tt:department>
+      <tt:role>Account Executive</tt:role>
+      <tt:division/>
+    </item>
+    <item>
+      <title>Mid-Market Account Executive (Outbound) - Madrid</title>
+      <description>&lt;h4&gt;&lt;strong&gt;Join us to shape the future!&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;Teamtailor is a global Employer Branding and ATS SaaS platform used by over &lt;strong&gt;13,000 companies, 250,000 users, and available in 90 countries worldwide.&lt;/strong&gt; 🌍&lt;/p&gt;&lt;p&gt;Working at &lt;a target="_blank" href="https://www.teamtailor.com/en/"&gt;Teamtailor&lt;/a&gt; means being part of a dynamic, fast-paced tech company that values impact and responsibility. Our workplace fosters an environment where everyone can contribute meaningfully to the growth of the company. 🎉🥳&lt;/p&gt;&lt;p</description>
+      <pubDate>Thu, 23 Apr 2026 12:41:59 +0200</pubDate>
+      <link>https://career.teamtailor.com/jobs/7623275-mid-market-account-executive-outbound-madrid</link>
+      <remoteStatus>hybrid</remoteStatus>
+      <guid>fb63bcb7-fcdf-4f35-ba55-b800505f8294</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>Madrid</tt:name>
+          <tt:address>Monday Chamberi</tt:address>
+          <tt:zip>28010</tt:zip>
+          <tt:city>Madrid</tt:city>
+          <tt:country>Spain</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Sales</tt:department>
+      <tt:role>Account Executive</tt:role>
+      <tt:division/>
+    </item>
+  </channel>
+</rss>

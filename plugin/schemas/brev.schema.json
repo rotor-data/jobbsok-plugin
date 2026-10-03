@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/brev.schema.json",
+  "title": "Personligt brev (ansokningar/<mapp>/brev.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "sprak": {
+      "enum": [
+        "sv",
+        "en"
+      ]
+    },
+    "design_variant": {
+      "type": "string",
+      "description": "Vilken variant i design.json.varianter som används för den här ansökan (valfri)."
+    },
+    "mottagare": {
+      "type": "object",
+      "properties": {
+        "namn": {
+          "type": "string"
+        },
+        "bolag": {
+          "type": "string"
+        },
+        "adress": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "datum": {
+      "type": "string"
+    },
+    "rubrik": {
+      "type": "string"
+    },
+    "stycken": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "halsning": {
+      "type": "string"
+    },
+    "ton": {
+      "type": "object",
+      "properties": {
+        "personas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "namn": {
+                "type": "string"
+              },
+              "vikt": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "namn"
+            ]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "kalla_per_stycke": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "sprak",
+    "stycken"
+  ]
+}

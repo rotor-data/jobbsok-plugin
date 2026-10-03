@@ -1,0 +1,15 @@
+{
+  "name": "jobbsok",
+  "owner": {
+    "name": "Rotor"
+  },
+  "description": "Lokal marknadsplats för pluginen Jobbsök.",
+  "plugins": [
+    {
+      "name": "jobbsok",
+      "description": "Karriärcoach, faktabank, CV-design, jobbsökning och skräddarsydda ansökningar – lokalt.",
+      "version": "0.1.0",
+      "source": "./plugin"
+    }
+  ]
+}

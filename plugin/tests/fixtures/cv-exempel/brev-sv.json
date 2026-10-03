@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "sprak": "sv",
+  "person": {
+    "namn": "Maja Lindqvist",
+    "titel": "Projektledare inom kommunikation",
+    "ort": "Uppsala",
+    "epost": "maja.lindqvist@example.se",
+    "telefon": "070-123 45 67",
+    "lankar": [
+      {
+        "etikett": "LinkedIn",
+        "url": "https://www.linkedin.com/in/majalindqvist-exempel"
+      }
+    ],
+    "foto": "foto.svg"
+  },
+  "mottagare": {
+    "namn": "Anna Berg, rekryterande chef",
+    "bolag": "Exempelkommunen",
+    "adress": "Box 123\n751 00 Uppsala"
+  },
+  "datum": "1 oktober 2026",
+  "rubrik": "Ansökan: Kommunikationsstrateg, ref. 2026/114",
+  "stycken": [
+    "I er annons beskriver ni en organisation mitt i ett systembyte, med medarbetare som behöver förstå varför och chefer som behöver stöd. Det är precis det jag har arbetat med de senaste fem åren.",
+    "På Region Uppsala ledde jag kommunikationen kring ett nytt journalsystem för 9 000 medarbetare. Jag byggde upp ett nätverk av lokala ambassadörer, tog fram material för dialogmöten och mätte förståelsen kvartalsvis, så att vi kunde rätta kursen i tid.",
+    "Jag tror att god förändringskommunikation börjar i lyssnandet. Därför lägger jag tid på att förstå vad olika grupper oroar sig för innan jag skriver något.",
+    "Jag berättar gärna mer om hur jag skulle angripa ert införande. Tack för att du läser!"
+  ],
+  "halsning": "Vänliga hälsningar"
+}

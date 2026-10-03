@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "sprak": "en",
+  "design_version": 1,
+  "person": {
+    "namn": "Maja Lindqvist",
+    "titel": "Communications Project Manager",
+    "ort": "Uppsala",
+    "epost": "maja.lindqvist@example.se",
+    "telefon": "070-123 45 67",
+    "lankar": [
+      {
+        "etikett": "LinkedIn",
+        "url": "https://www.linkedin.com/in/majalindqvist-exempel"
+      }
+    ],
+    "foto": "foto.svg"
+  },
+  "profil": "Project manager with eight years in internal communications in the public sector. I make complex change understandable and get leadership and staff pulling in the same direction.",
+  "sektioner": [
+    {
+      "typ": "erfarenhet",
+      "poster": [
+        {
+          "titel": "Communications Strategist",
+          "organisation": "Region Uppsala",
+          "ort": "Uppsala, Sweden",
+          "period": "2021 – present",
+          "punkter": [
+            "Led communications for a new patient record system rolled out to 9,000 staff",
+            "Rebuilt the intranet front page; visits rose by 40%"
+          ]
+        },
+        {
+          "titel": "Communications Officer",
+          "organisation": "Uppsala Municipality",
+          "ort": "Uppsala, Sweden",
+          "period": "2017 – 2021",
+          "punkter": [
+            "Owned the newsletter to 12,000 subscribers"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "utbildning",
+      "poster": [
+        {
+          "titel": "BA, Media and Communication Studies",
+          "organisation": "Uppsala University",
+          "period": "2014 – 2017"
+        }
+      ]
+    },
+    {
+      "typ": "lista",
+      "id": "kompetenser",
+      "grupper": [
+        {
+          "etikett": "Communication",
+          "poster": [
+            "Change communication",
+            "Plain language",
+            "Intranets"
+          ]
+        },
+        {
+          "etikett": "Tools",
+          "poster": [
+            "SiteVision",
+            "Canva",
+            "Microsoft 365"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "lista",
+      "id": "sprak",
+      "grupper": [
+        {
+          "etikett": "",
+          "poster": [
+            "Swedish (native)",
+            "English (fluent)"
+          ]
+        }
+      ]
+    }
+  ]
+}

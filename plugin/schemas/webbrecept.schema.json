@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/webbrecept.schema.json",
+  "title": "Webbrecept (sok/webbrecept/<namn>.json, skrivs av jakt_webbrecept.py)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "namn": {
+      "type": "string"
+    },
+    "hypotes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "titlar": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "orter": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "plattformar": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "nisch": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sajter": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fragor": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "fraga": {
+            "type": "string"
+          },
+          "plattform": {
+            "type": "string"
+          },
+          "titel": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "fraga"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "skapad": {
+      "type": "string"
+    },
+    "andrad": {
+      "type": "string"
+    },
+    "senast_kord": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "korningar": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "datum": {
+            "type": "string"
+          },
+          "resultat": {
+            "type": "integer"
+          },
+          "poster": {
+            "type": "integer"
+          },
+          "nya": {
+            "type": "integer"
+          },
+          "avvisade": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "namn",
+    "fragor"
+  ],
+  "additionalProperties": true
+}

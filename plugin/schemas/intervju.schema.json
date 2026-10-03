@@ -1,0 +1,496 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/intervju.schema.json",
+  "title": "Intervjuförberedelse och debrief (ansokningar/<mapp>/intervju.json)",
+  "type": "object",
+  "$defs": {
+    "qsort": {
+      "type": "object",
+      "properties": {
+        "instrument": {
+          "type": "string"
+        },
+        "topp": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4
+        },
+        "botten": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4
+        },
+        "kalla": {
+          "type": "string"
+        },
+        "sakerhet": {
+          "enum": [
+            "lag",
+            "medel",
+            "hog",
+            null
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "bolag": {
+      "type": "string"
+    },
+    "roll": {
+      "type": "string"
+    },
+    "arbetsgivarkort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "skapad": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+    },
+    "uppdaterad": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+    },
+    "vinkel": {
+      "type": "string"
+    },
+    "omgangar": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nr": {
+            "type": "integer"
+          },
+          "datum": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+          },
+          "tid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "format": {
+            "enum": [
+              "plats",
+              "video",
+              "telefon",
+              null
+            ]
+          },
+          "plats": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "traffar": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "namn": {
+                  "type": "string"
+                },
+                "roll": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "namn"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "ta_med": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "restid_min": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "fragor_troliga": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^f\\d+$"
+          },
+          "fraga": {
+            "type": "string"
+          },
+          "typ": {
+            "enum": [
+              "krav",
+              "lucka",
+              "brev",
+              "standard",
+              "ledarstil",
+              "motivation"
+            ]
+          },
+          "varfor": {
+            "type": "string"
+          },
+          "star": {
+            "type": "object",
+            "properties": {
+              "situation": {
+                "type": "string"
+              },
+              "uppgift": {
+                "type": "string"
+              },
+              "handling": {
+                "type": "string"
+              },
+              "resultat": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "kalla": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lucka_hantering": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "klar",
+              "saknar_exempel",
+              "ovad"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "fraga",
+          "typ",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "ledarstil": {
+      "type": "object",
+      "properties": {
+        "svar": {
+          "type": "string"
+        },
+        "kalla": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kalla_coach": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "fragor_att_stalla": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^q\\d+$"
+          },
+          "fraga": {
+            "type": "string"
+          },
+          "testar": {
+            "type": "string",
+            "pattern": "^(kultur|ledarskap|varningssignal|okant|textur|analys):"
+          },
+          "prioritet": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "varfor": {
+            "type": "string"
+          },
+          "svar": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "fraga",
+          "testar",
+          "prioritet"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "arbetsprov": {
+      "type": "object",
+      "properties": {
+        "forekommer": {
+          "type": "boolean"
+        },
+        "typ": {
+          "enum": [
+            "urvalsfragor",
+            "skrivprov",
+            "hemuppgift",
+            "case",
+            "presentation",
+            "annat",
+            null
+          ]
+        },
+        "instruktion": {
+          "type": "string"
+        },
+        "deadline": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+        },
+        "plan": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fil": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "forekommer"
+      ],
+      "additionalProperties": false
+    },
+    "ovning": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "datum": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+          },
+          "fraga_id": {
+            "type": "string"
+          },
+          "bra": {
+            "type": "string"
+          },
+          "skarpa": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tackmejl": {
+      "type": "object",
+      "properties": {
+        "fil": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "mall",
+            "utkast",
+            "skickat_av_henne"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "debrief": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "omgang": {
+            "type": "integer"
+          },
+          "datum": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+          },
+          "sag_horde": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tolkningar": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "svar_pa_fragor": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "fraga_id": {
+                  "type": "string"
+                },
+                "svar": {
+                  "type": "string"
+                },
+                "undvikande": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "fraga_id",
+                "svar"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "chef": {
+            "type": "object",
+            "properties": {
+              "lmx": {
+                "type": "string"
+              },
+              "autonomistod": {
+                "type": "string"
+              },
+              "psykologisk_trygghet": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "kultur_qsort": {
+            "$ref": "#/$defs/qsort"
+          },
+          "fit_mot_ideal": {
+            "type": "object",
+            "properties": {
+              "overlapp_topp": {
+                "type": "integer"
+              },
+              "konflikt": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "kommentar": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "varningssignaler_nya": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "signal": {
+                  "type": "string"
+                },
+                "belagg": {
+                  "type": "string"
+                },
+                "allman": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "signal"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "vill_vidare_0_10": {
+            "type": [
+              "integer",
+              "number",
+              "null"
+            ]
+          },
+          "sakerhet_bild_0_10": {
+            "type": [
+              "integer",
+              "number",
+              "null"
+            ]
+          },
+          "hennes_ord": {
+            "type": "string"
+          },
+          "arbetsgivarkort_uppdaterat": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version"
+  ]
+}

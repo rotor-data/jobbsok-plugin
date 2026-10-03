@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "gillade_formuleringar": ["Jag gör det krångliga begripligt."],
+  "aldrig_ord": ["passionerad", "brinner för", "drivande"],
+  "tonblandningar": [{"namn": "Varm och saklig", "personas": [{"id": "kim", "namn": "Kim", "vikt": 0.7}, {"id": "maya", "namn": "Maya", "vikt": 0.3}], "anvand_till": "brev"}],
+  "smyra": {"kim_persona_id": {"sv": null, "en": null}}
+}

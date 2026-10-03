@@ -1,0 +1,9 @@
+sammanlagda ordinarie arbetstid. Sjukfrånvaron
+redovisas i procent.
+
+Sjukfrånvaro i procent                                                                         2025                      2024           2023
+
+Totalt                                                                                           3,76                    4,65            4,48
+Andel 60 dagar eller mer                                                                       57,69                     56,42          58,58
+Kvinnor                                                                                          3,97                     5,11           4,83
+Män                                                                                              3,00                     2,79           3,01

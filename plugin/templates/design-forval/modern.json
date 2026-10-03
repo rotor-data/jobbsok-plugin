@@ -1,0 +1,13 @@
+{
+  "schema_version": 1, "version": 1, "namn": "Modern med sidokolumn",
+  "beskrivning": "Ett typsnitt (Inter), rubriker i versaler, kontakt och kompetenser i en smal kolumn till höger.",
+  "layout": "sidokolumn",
+  "tokens": {
+    "font_rubrik": "Inter", "font_brod": "Inter",
+    "storlek_brod_pt": 10, "storlek_namn_pt": 25, "storlek_rubrik_pt": 13,
+    "radavstand": 1.38, "farg_text": "#16181d", "farg_accent": "#2b4c7e", "farg_dampad": "#5b616e",
+    "marginal_mm": 17, "sektion_luft_mm": 6.5, "visa_foto": false, "rubrik_stil": "versaler"
+  },
+  "sektioner": ["profil","erfarenhet","utbildning","kompetenser","sprak","kurser","ideella","referenser"],
+  "historik": [{"version": 1, "datum": "2026-10-01", "andring": "Förval: modern"}]
+}

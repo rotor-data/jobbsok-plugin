@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/hypoteser.schema.json",
+  "title": "Jakthypoteser (sok/hypoteser.json, skrivs av jakt_hypoteser.py)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "hypoteser": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "typ": {
+            "enum": [
+              "narliggande_yrke",
+              "alternativ_titel",
+              "energimatch",
+              "liknande_arbetsgivare",
+              "likar",
+              "vardedriven",
+              "tillvaxtsignal",
+              "webbjakt",
+              "nischsajt",
+              "dold_marknad",
+              "joker"
+            ]
+          },
+          "beskrivning": {
+            "type": "string"
+          },
+          "metod": {
+            "enum": [
+              "jakt_titlar",
+              "jakt_arbetsgivare",
+              "jakt_signaler",
+              "webbrecept",
+              "recept",
+              "malbolag",
+              "manuell"
+            ]
+          },
+          "parametrar": {
+            "type": "object"
+          },
+          "recept": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "webbrecept": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "motivering": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "skapad": {
+            "type": "string"
+          },
+          "andrad": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "aktiv",
+              "pausad",
+              "beskuren"
+            ]
+          },
+          "korningar": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "datum": {
+                  "type": "string"
+                },
+                "fynd": {
+                  "type": "integer"
+                },
+                "uid": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "anteckning": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "datum",
+                "fynd"
+              ],
+              "additionalProperties": true
+            }
+          },
+          "senast_kord": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "utbyte": {
+            "type": "object",
+            "properties": {
+              "fynd": {
+                "type": "integer"
+              },
+              "bedomda": {
+                "type": "integer"
+              },
+              "intressant": {
+                "type": "integer"
+              },
+              "sokt": {
+                "type": "integer"
+              },
+              "nej": {
+                "type": "integer"
+              },
+              "dubbletter": {
+                "type": "integer"
+              },
+              "andel": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "beraknad": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "id",
+          "typ",
+          "beskrivning",
+          "metod",
+          "status"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "hypoteser"
+  ],
+  "additionalProperties": false
+}

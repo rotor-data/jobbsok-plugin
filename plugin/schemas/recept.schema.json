@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/recept.schema.json",
+  "title": "Sökrecept (sok/recept/<namn>.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "namn": {
+      "type": "string"
+    },
+    "kallor": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "jobtech": {
+      "type": "object",
+      "properties": {
+        "q": {
+          "type": "string"
+        },
+        "occupation-name": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "occupation-group": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "municipality": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "region": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "remote": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "extra": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "filter": {
+      "type": "object",
+      "properties": {
+        "exkludera_ord": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exkludera_arbetsgivare": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "min_poang": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "senast_kord": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "namn",
+    "kallor"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1, "version": 1, "namn": "Lugn klassisk",
+  "beskrivning": "En kolumn, serifrubriker, dämpad petrolfärg. Tryggast för ATS och traditionella mottagare.",
+  "layout": "klassisk",
+  "tokens": {
+    "font_rubrik": "Source Serif 4", "font_brod": "Source Sans 3",
+    "storlek_brod_pt": 10.5, "storlek_namn_pt": 24, "storlek_rubrik_pt": 13,
+    "radavstand": 1.32, "farg_text": "#1d1d1f", "farg_accent": "#2f5d62", "farg_dampad": "#5f6368",
+    "marginal_mm": 19, "sektion_luft_mm": 6, "visa_foto": false, "rubrik_stil": "linje"
+  },
+  "sektioner": ["profil","erfarenhet","utbildning","kompetenser","sprak","kurser","ideella","referenser"],
+  "historik": [{"version": 1, "datum": "2026-10-01", "andring": "Förval: konservativ"}]
+}

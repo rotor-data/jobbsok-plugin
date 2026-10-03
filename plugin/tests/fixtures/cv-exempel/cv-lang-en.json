@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "sprak": "en",
+  "design_version": 1,
+  "person": {
+    "namn": "Maja Lindqvist",
+    "titel": "Communications Project Manager",
+    "ort": "Uppsala",
+    "epost": "maja.lindqvist@example.se",
+    "telefon": "070-123 45 67",
+    "lankar": [
+      {
+        "etikett": "LinkedIn",
+        "url": "https://www.linkedin.com/in/majalindqvist-exempel"
+      }
+    ],
+    "foto": "foto.svg"
+  },
+  "profil": "Project manager with twelve years in public-sector communications, from editorial work to strategic responsibility for major change. I make complex decisions understandable, build channels people actually use, and get leadership and staff pulling in the same direction. Comfortable in large organisations with many stakeholders.",
+  "sektioner": [
+    {
+      "typ": "erfarenhet",
+      "rubrik": "Experience",
+      "poster": [
+        {
+          "titel": "Senior Communications Strategist and Project Manager for Digital Transformation and Business Development",
+          "organisation": "Region Uppsala – Hälso- och sjukvårdsförvaltningen, Avdelningen för digitalisering",
+          "ort": "Uppsala",
+          "period": "2021 – present",
+          "punkter": [
+            "Led communications for the rollout of a new patient record system to 9,000 staff across 14 hospitals and health centres, working closely with IT, department heads and union representatives",
+            "Rebuilt the intranet front page and navigation with users; visits rose by 40% and 'where do I find' support tickets halved",
+            "Developed a message platform and channel strategy adopted by the executive team",
+            "Coached 25 managers in leading dialogue meetings about change",
+            "Introduced reach and comprehension measurement in four quarterly surveys"
+          ]
+        },
+        {
+          "titel": "Deputy Head of Communications with Special Responsibility for Internal Communication and Change Management",
+          "organisation": "Uppsala kommun, Kommunledningskontoret",
+          "ort": "Uppsala",
+          "period": "2019 – 2021",
+          "punkter": [
+            "Led communications for the rollout of a new patient record system to 9,000 staff across 14 hospitals and health centres, working closely with IT, department heads and union representatives",
+            "Rebuilt the intranet front page and navigation with users; visits rose by 40% and 'where do I find' support tickets halved",
+            "Developed a message platform and channel strategy adopted by the executive team",
+            "Coached 25 managers in leading dialogue meetings about change",
+            "Introduced reach and comprehension measurement in four quarterly surveys"
+          ]
+        },
+        {
+          "titel": "Communications Officer and Editor for Intranet, Newsletters and Leadership Communication",
+          "organisation": "Sveriges Lantbruksuniversitet (SLU)",
+          "ort": "Uppsala",
+          "period": "2016 – 2019",
+          "punkter": [
+            "Led communications for the rollout of a new patient record system to 9,000 staff across 14 hospitals and health centres, working closely with IT, department heads and union representatives",
+            "Rebuilt the intranet front page and navigation with users; visits rose by 40% and 'where do I find' support tickets halved",
+            "Developed a message platform and channel strategy adopted by the executive team",
+            "Coached 25 managers in leading dialogue meetings about change"
+          ]
+        },
+        {
+          "titel": "Project Coordinator, Communications and Events in an EU-Funded Development Project",
+          "organisation": "Länsstyrelsen i Uppsala län",
+          "ort": "Uppsala",
+          "period": "2014 – 2016",
+          "punkter": [
+            "Led communications for the rollout of a new patient record system to 9,000 staff across 14 hospitals and health centres, working closely with IT, department heads and union representatives",
+            "Rebuilt the intranet front page and navigation with users; visits rose by 40% and 'where do I find' support tickets halved",
+            "Developed a message platform and channel strategy adopted by the executive team",
+            "Coached 25 managers in leading dialogue meetings about change"
+          ]
+        },
+        {
+          "titel": "Information Officer (temporary)",
+          "organisation": "Upsala Nya Tidning",
+          "ort": "Uppsala",
+          "period": "2013 – 2014",
+          "punkter": [
+            "Led communications for the rollout of a new patient record system to 9,000 staff across 14 hospitals and health centres, working closely with IT, department heads and union representatives",
+            "Rebuilt the intranet front page and navigation with users; visits rose by 40% and 'where do I find' support tickets halved"
+          ]
+        },
+        {
+          "titel": "Editorial Assistant",
+          "organisation": "Studentradion i Uppsala",
+          "ort": "Uppsala",
+          "period": "2011 – 2013",
+          "punkter": [
+            "Led communications for the rollout of a new patient record system to 9,000 staff across 14 hospitals and health centres, working closely with IT, department heads and union representatives",
+            "Rebuilt the intranet front page and navigation with users; visits rose by 40% and 'where do I find' support tickets halved"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "utbildning",
+      "rubrik": "Education",
+      "poster": [
+        {
+          "titel": "BA, Media and Communication Studies",
+          "organisation": "Uppsala University",
+          "period": "2008 – 2011",
+          "text": "Thesis on plain language in public authority texts."
+        },
+        {
+          "titel": "Project Management in the Public Sector, 15 ECTS",
+          "organisation": "Stockholm University",
+          "period": "2015"
+        }
+      ]
+    },
+    {
+      "typ": "lista",
+      "rubrik": "Skills",
+      "grupper": [
+        {
+          "etikett": "Communication",
+          "poster": [
+            "Change communication",
+            "Plain language",
+            "Intranets",
+            "Leadership communication",
+            "Crisis communication",
+            "Message platforms"
+          ]
+        },
+        {
+          "etikett": "Projects",
+          "poster": [
+            "Agile project management",
+            "Stakeholder analysis",
+            "Workshop facilitation"
+          ]
+        },
+        {
+          "etikett": "Tools",
+          "poster": [
+            "SiteVision",
+            "Episerver",
+            "Canva",
+            "Adobe InDesign",
+            "Microsoft 365",
+            "Mailchimp"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "lista",
+      "rubrik": "Languages",
+      "grupper": [
+        {
+          "etikett": "",
+          "poster": [
+            "Swedish (native)",
+            "English (fluent)",
+            "German (basic)"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "utbildning",
+      "id": "kurser",
+      "rubrik": "Courses",
+      "poster": [
+        {
+          "titel": "Certified Plain Language Reviewer",
+          "organisation": "Språkrådet",
+          "period": "2018"
+        },
+        {
+          "titel": "Kriskommunikation, MSB",
+          "organisation": "MSB",
+          "period": "2020"
+        }
+      ]
+    },
+    {
+      "typ": "text",
+      "id": "ideella",
+      "rubrik": "Volunteering",
+      "text": "Board member and communications lead at Uppsala Rowing Club since 2017."
+    }
+  ]
+}

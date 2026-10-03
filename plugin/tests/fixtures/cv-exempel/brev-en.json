@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "sprak": "en",
+  "person": {
+    "namn": "Maja Lindqvist",
+    "titel": "Communications Project Manager",
+    "ort": "Uppsala",
+    "epost": "maja.lindqvist@example.se",
+    "telefon": "070-123 45 67",
+    "lankar": [
+      {
+        "etikett": "LinkedIn",
+        "url": "https://www.linkedin.com/in/majalindqvist-exempel"
+      }
+    ],
+    "foto": "foto.svg"
+  },
+  "mottagare": {
+    "namn": "Anna Berg, Hiring Manager",
+    "bolag": "Example Ltd",
+    "adress": "1 Example Street\nLondon"
+  },
+  "datum": "1 October 2026",
+  "rubrik": "Application: Communications Strategist",
+  "stycken": [
+    "Your posting describes an organisation in the middle of a system change, with staff who need to understand why and managers who need support. That is exactly what I have worked on for the past five years.",
+    "At Region Uppsala I led communications for a new patient record system for 9,000 staff. I built a network of local ambassadors, produced material for dialogue meetings and measured comprehension quarterly so we could correct course in time.",
+    "I would be glad to tell you more about how I would approach your rollout. Thank you for reading."
+  ],
+  "halsning": "Kind regards"
+}

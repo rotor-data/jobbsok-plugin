@@ -1,0 +1,12 @@
+{% include "_topp.html" %}<body class="lay-kompakt stil-{{ rubrik_stil }}">
+<main class="sida">
+<header class="huvud">
+<div class="huvud-text">
+<h1 class="namn">{{ person.namn }}</h1>
+{% if person.titel %}<p class="yrkestitel">{{ person.titel }}</p>{% endif %}
+</div>
+{% include "_kontakt.html" %}</header>
+{% for s in sektioner %}{% include "_sektion.html" %}{% endfor %}
+</main>
+</body>
+</html>

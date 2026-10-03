@@ -1,0 +1,270 @@
+{
+ "om": "Antitesfixturer för antiai.py. tic=true ska ge antites_pivot, tic=false får inte ge antites_pivot. Användarens exempel plus nya varianter skrivna under kalibreringen 2026-10-01.",
+ "texter": [
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Det handlar inte om verktyg, men om människor."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Jag söker inte ett jobb, men ett sammanhang."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Det var inte lätt, men det var värt det."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Vi bygger inte produkter. Vi bygger relationer."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Inte för att det är enkelt, utan för att det är viktigt."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Det är inte en titel. Det är ett ansvar."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Mitt fokus är inte volym – det är kvalitet."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Det handlar inte om att arbeta hårdare utan om att arbeta smartare."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Ledarskap är inte en position, utan en handling."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Vi säljer inte system. Vi säljer trygghet."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Jag jobbar inte för lönen, men för meningen."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Det här är inte ett slutmål – det är en början."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Mindre administration, mer patienttid."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Det handlar inte om mig. Det handlar om teamet."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Kvalitet är inte ett mål utan snarare en vana."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Jag leder inte genom kontroll. Jag leder genom tillit."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Inte för att jag måste, utan för att jag vill."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Vi gör inte det lätta. Vi gör det rätta."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Det var inte ett beslut, men ett vägval."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Service är inte en avdelning – det är en kultur."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "This isn't about tools. It's about people."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "It was not easy, but it was worth it."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "We don't just build products, we build trust."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "It's not about speed, it's about care."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "Leadership isn't a title. It's a practice."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "We don't sell software. We sell certainty."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "Less noise, more signal."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "I don't manage people, I coach them."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "Customer service is not a department, but a mindset."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "It wasn't a job. It was a mission."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "This is not a career move — it's a calling."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "We don't just ship code, we ship outcomes."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Jag hann inte klart, men skickade ett utkast dagen efter."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Projektet var inte budgeterat, men vi fick medel från regionen."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Vi hann inte med mötet, men det löste sig."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Lagret var inte uppvärmt, så vi flyttade packningen till hall två."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Jag fick inte tjänsten 2019, men chefen ringde ett år senare."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Bussen kom inte, men en kollega körde mig till Gävle."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Systemet fungerade inte första veckan. Leverantören skickade en tekniker."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Jag har inte körkort för lastbil, men har truckkort A och B."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Budgeten räckte inte hela året, men vi sparade på inköpen."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Kunden svarade inte på mejlet. Jag ringde på fredagen."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Det gick inte att boka lokalen i mars, men vi fick den i april."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Utbildningen var inte obligatorisk – ändå gick alla tolv."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Jag kan inte börja förrän i augusti, eftersom jag har uppsägningstid."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Vi nådde inte målet, men sjukfrånvaron sjönk med en tredjedel."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Det går inte att förenkla ytterligare utan att bli missvisande."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "I could not attend, but I sent notes."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "The forklift was not certified, so we rented one for two weeks."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "I did not get the grant, but the council funded half the project."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "We missed the deadline by a day. The client extended the contract anyway."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "The tool did not support Swedish, but we wrote our own spell list."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "I have not worked in retail, but I ran a café for three years."
+  }
+ ]
+}

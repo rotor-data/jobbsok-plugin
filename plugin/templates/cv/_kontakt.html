@@ -1,0 +1,1 @@
+<p class="kontakt">{% for k in person.kontakt %}<span>{% if k.url %}<a href="{{ k.url }}">{{ k.text }}</a>{% else %}{{ k.text }}{% endif %}</span>{% endfor %}</p>

@@ -1,0 +1,105 @@
+{
+ "om": "Kontrollomgång för antitesregeln, skriven EFTER kalibreringen 2026-10-01 och inte använd för att ställa in regeln. Första körningen: 7/10 tics fångade, 0/10 falsklarm. Missarna (aldrig/never, \"We don't X. We Y\", utbrytningen \"Det är inte X som…, men Y\") rättades efteråt, så filen är inte längre blind.",
+ "texter": [
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Det är inte siffrorna som räknas, men människorna bakom dem."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Vi levererar inte rapporter. Vi levererar beslutsunderlag."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Min styrka är inte tekniken – det är förmågan att lyssna."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Jag valde inte yrket för pengarnas skull, utan för att göra skillnad."
+  },
+  {
+   "sprak": "sv",
+   "tic": true,
+   "text": "Mindre möten, mer genomförande."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "Success isn't measured in hours. It's measured in impact."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "I don't just answer tickets, I solve problems."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "It's not about the role, it's about the mission."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "Teaching was never a job for me. It was a vocation."
+  },
+  {
+   "sprak": "en",
+   "tic": true,
+   "text": "We don't chase trends. We set them."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Jag fick inte ledigt i juni, men tog ut semestern i augusti."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Maskinen startade inte. Vi bytte säkring och körde vidare."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Kursen fanns inte i Umeå, så jag läste den på distans."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Vi hade inte råd med konsulter, men två praktikanter hjälpte till."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Det snöade inte förrän i januari, men då kom det mycket."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "I was not on call that weekend, but I answered two alarms."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "The supplier did not deliver on time. We sourced parts locally."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "My manager could not join, but she reviewed the plan on Monday."
+  },
+  {
+   "sprak": "en",
+   "tic": false,
+   "text": "We didn't hit the target in 2023, but churn fell by a fifth."
+  },
+  {
+   "sprak": "sv",
+   "tic": false,
+   "text": "Kunden ville inte förlänga avtalet, men rekommenderade oss till en annan region."
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-slot="titel">CV</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="mall.css">
+</head>
+<body class="cv">
+<main class="sida">
+<header class="huvud" data-del="sidhuvud">
+<img class="foto" data-if="person.foto" data-slot="person.foto" alt="Foto">
+<div class="huvud-text">
+<h1 class="namn" data-slot="person.namn">Namn</h1>
+<p class="yrkestitel" data-slot="person.titel">Yrkestitel</p>
+<ul class="kontakt"><li data-repeat="person.kontakt"><a data-slot="text">kontakt</a></li></ul>
+</div>
+</header>
+<div class="kropp">
+<div class="huvudspalt">
+<section class="sektion profil" data-sektion="profil">
+<h2 data-slot-rubrik>Profil</h2>
+<p class="text-stycke" data-repeat="stycken">Profiltext</p>
+</section>
+<section class="sektion" data-sektion="erfarenhet">
+<h2 data-slot-rubrik>Erfarenhet</h2>
+<article class="post" data-repeat="poster">
+<div class="post-topp"><h3 class="post-titel" data-slot="titel">Titel</h3><span class="period" data-slot="period">Period</span></div>
+<p class="plats" data-slot="plats">Arbetsgivare, ort</p>
+<p class="post-text" data-slot="text"></p>
+<ul class="punkter"><li data-repeat="punkter">Punkt</li></ul>
+</article>
+</section>
+<section class="sektion" data-sektion="utbildning">
+<h2 data-slot-rubrik>Utbildning</h2>
+<article class="post" data-repeat="poster">
+<div class="post-topp"><h3 class="post-titel" data-slot="titel">Utbildning</h3><span class="period" data-slot="period">Period</span></div>
+<p class="plats" data-slot="plats">Skola</p>
+<p class="post-text" data-slot="text"></p>
+<ul class="punkter"><li data-repeat="punkter">Punkt</li></ul>
+</article>
+</section>
+<section class="sektion" data-sektion="kompetenser">
+<h2 data-slot-rubrik>Kompetenser</h2>
+<p class="grupp" data-repeat="grupper"><span class="grupp-etikett" data-slot="etikett">Grupp</span> <span class="grupp-rad" data-slot="rad">a · b · c</span></p>
+</section>
+<section class="sektion" data-sektion="sprak">
+<h2 data-slot-rubrik>Språk</h2>
+<p class="grupp" data-repeat="grupper"><span class="grupp-etikett" data-slot="etikett"></span> <span class="grupp-rad" data-slot="rad">Svenska</span></p>
+</section>
+<section class="sektion" data-repeat="sektioner">
+<h2 data-slot-rubrik>Övrig sektion</h2>
+<article class="post" data-repeat="poster">
+<div class="post-topp"><h3 class="post-titel" data-slot="titel">Titel</h3><span class="period" data-slot="period"></span></div>
+<p class="plats" data-slot="plats"></p>
+<p class="post-text" data-slot="text"></p>
+<ul class="punkter"><li data-repeat="punkter">Punkt</li></ul>
+</article>
+<p class="grupp" data-repeat="grupper"><span class="grupp-etikett" data-slot="etikett"></span> <span class="grupp-rad" data-slot="rad"></span></p>
+<p class="text-stycke" data-repeat="stycken">Text</p>
+</section>
+</div>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1, "version": 1, "namn": "Varm med porträtt",
+  "beskrivning": "Serif i både rubrik och namn, varm terrakotta, plats för foto. Personlig men saklig.",
+  "layout": "portratt",
+  "tokens": {
+    "font_rubrik": "Source Serif 4", "font_brod": "Source Sans 3",
+    "storlek_brod_pt": 10.5, "storlek_namn_pt": 26, "storlek_rubrik_pt": 13.5,
+    "radavstand": 1.35, "farg_text": "#2a2522", "farg_accent": "#9a4a2f", "farg_dampad": "#6b625c",
+    "marginal_mm": 18, "sektion_luft_mm": 6.5, "visa_foto": true, "rubrik_stil": "accentstreck"
+  },
+  "sektioner": ["profil","erfarenhet","utbildning","kompetenser","sprak","kurser","ideella","referenser"],
+  "historik": [{"version": 1, "datum": "2026-10-01", "andring": "Förval: varm"}]
+}

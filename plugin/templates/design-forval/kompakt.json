@@ -1,0 +1,13 @@
+{
+  "schema_version": 1, "version": 1, "namn": "Kompakt och tät",
+  "beskrivning": "Datum i egen vänsterspalt, tätare luft. För lång erfarenhet som ska rymmas på två sidor.",
+  "layout": "kompakt",
+  "tokens": {
+    "font_rubrik": "Source Sans 3", "font_brod": "Source Sans 3",
+    "storlek_brod_pt": 10, "storlek_namn_pt": 22, "storlek_rubrik_pt": 11.5,
+    "radavstand": 1.25, "farg_text": "#1b1d21", "farg_accent": "#3d5a45", "farg_dampad": "#5d6166",
+    "marginal_mm": 15, "sektion_luft_mm": 4.5, "visa_foto": false, "rubrik_stil": "versaler"
+  },
+  "sektioner": ["profil","erfarenhet","utbildning","kompetenser","sprak","kurser","ideella","referenser"],
+  "historik": [{"version": 1, "datum": "2026-10-01", "andring": "Förval: kompakt"}]
+}

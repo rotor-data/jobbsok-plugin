@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/logg.schema.json",
+  "title": "Ansökningslogg (ansokningar/<mapp>/logg.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "status": {
+      "enum": [
+        "utkast",
+        "skickad",
+        "intervju",
+        "nej",
+        "erbjudande"
+      ]
+    },
+    "skickad": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+    },
+    "kanal": {
+      "enum": [
+        "formular",
+        "mejl",
+        null
+      ]
+    },
+    "kontakt": {
+      "type": "string"
+    },
+    "foljupp_datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+    },
+    "anteckningar": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "datum": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true,
+            "required": [
+              "text"
+            ]
+          }
+        ]
+      }
+    },
+    "bolag": {
+      "type": "string"
+    },
+    "roll": {
+      "type": "string"
+    },
+    "deadline": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+    },
+    "annons_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jobb_uid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status"
+  ]
+}

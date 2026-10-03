@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jobbsok/cv.schema.json",
+  "title": "CV för en ansökan (ansokningar/<mapp>/cv.json)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "sprak": {
+      "enum": [
+        "sv",
+        "en"
+      ]
+    },
+    "design_version": {
+      "type": "integer"
+    },
+    "design_variant": {
+      "type": "string",
+      "description": "Vilken variant i design.json.varianter som används för den här ansökan (valfri)."
+    },
+    "person": {
+      "type": "object",
+      "properties": {
+        "namn": {
+          "type": "string"
+        },
+        "titel": {
+          "type": "string"
+        },
+        "ort": {
+          "type": "string"
+        },
+        "epost": {
+          "type": "string"
+        },
+        "telefon": {
+          "type": "string"
+        },
+        "lankar": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "etikett": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "url"
+            ]
+          }
+        },
+        "foto": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "namn"
+      ]
+    },
+    "profil": {
+      "type": "string"
+    },
+    "sektioner": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "typ": {
+                "enum": [
+                  "erfarenhet",
+                  "utbildning",
+                  "ideella",
+                  "kurser"
+                ]
+              },
+              "rubrik": {
+                "type": "string"
+              },
+              "poster": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "titel": {
+                      "type": "string"
+                    },
+                    "organisation": {
+                      "type": "string"
+                    },
+                    "ort": {
+                      "type": "string"
+                    },
+                    "period": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "punkter": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "kalla": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "id": {
+                "enum": [
+                  "profil",
+                  "erfarenhet",
+                  "utbildning",
+                  "kompetenser",
+                  "sprak",
+                  "kurser",
+                  "ideella",
+                  "referenser",
+                  "ovrigt"
+                ],
+                "description": "Matchar design.json.sektioner och styr ordningen."
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "typ",
+              "rubrik",
+              "poster"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "typ": {
+                "const": "lista"
+              },
+              "rubrik": {
+                "type": "string"
+              },
+              "grupper": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "etikett": {
+                      "type": "string"
+                    },
+                    "poster": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                    "poster"
+                  ]
+                }
+              },
+              "id": {
+                "enum": [
+                  "profil",
+                  "erfarenhet",
+                  "utbildning",
+                  "kompetenser",
+                  "sprak",
+                  "kurser",
+                  "ideella",
+                  "referenser",
+                  "ovrigt"
+                ],
+                "description": "Matchar design.json.sektioner och styr ordningen."
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "typ",
+              "rubrik",
+              "grupper"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "typ": {
+                "const": "text"
+              },
+              "rubrik": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "id": {
+                "enum": [
+                  "profil",
+                  "erfarenhet",
+                  "utbildning",
+                  "kompetenser",
+                  "sprak",
+                  "kurser",
+                  "ideella",
+                  "referenser",
+                  "ovrigt"
+                ],
+                "description": "Matchar design.json.sektioner och styr ordningen."
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "typ",
+              "rubrik",
+              "text"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "sprak",
+    "person",
+    "sektioner"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "faser": {
+    "intake": {
+      "klar": true,
+      "coaching_goal": "Veta om jag ska byta eller bara göra om mitt jobb, innan jag söker något",
+      "trigger": "Ny organisation i förvaltningen, alla texter ska nu godkännas i tre led",
+      "current_role": {"title": "Kommunikationsstrateg", "org": "Region Exempel", "tenure_months": 66},
+      "stay_vs_leave_balance": {
+        "stay_reasons": ["Kollegorna på enheten", "Jag gör nytta för patienterna", "Tio minuter med cykel"],
+        "leave_reasons": ["Allt ska godkännas i tre led", "Jag skriver sällan själv längre", "Långa statusmöten varje vecka"]
+      },
+      "hard_constraints": {"location": "Uppsala", "max_commute_min": 45, "commute_mode": "kollektivt eller cykel",
+                           "max_travel_days_per_month": 2, "remote_days_pref": {"min": 1, "max": 3}, "salary_floor": 42000,
+                           "other": ["Hämtar på fritids 16.30 två dagar i veckan"]}
+    },
+    "identity": {
+      "klar": true,
+      "life_portrait_statement": "Jag gör det krångliga begripligt och får folk att göra klart saker tillsammans.",
+      "values_top5": [
+        {"value": "Samhällsnytta", "rank": 1, "violated_example": "Kampanjen för spelbolaget på byrån, jag skämdes"},
+        {"value": "Självständighet", "rank": 2, "violated_example": "Allt ska godkännas i tre led"},
+        {"value": "Lärande", "rank": 3, "violated_example": "Samma nyhetsbrev varje månad i tre år"},
+        {"value": "Kollegor", "rank": 4, "violated_example": "Ensam kommunikatör på föreningen"},
+        {"value": "Balans", "rank": 5, "violated_example": "Kvällsjobb inför varje lansering på byrån"}
+      ],
+      "career_anchors_ranked": ["tjanande", "autonomi", "livsstil", "teknisk_funktionell", "trygghet", "utmaning", "ledarskap", "entreprenorskap"]
+    },
+    "energy_log": {
+      "klar": true,
+      "patterns": {
+        "energizers": ["Skriva klart en text som någon faktiskt förstår", "Workshop med en vårdenhet"],
+        "drainers": ["Långa statusmöten", "Godkännanderundor i mejl"],
+        "flow_conditions": ["Skriva i lugn och ro en förmiddag", "Leda ett projekt med tydligt slut"]
+      },
+      "retrospective_vs_logged_discrepancies": ["Trodde att möten var värst, men det var godkännanderundorna"]
+    },
+    "needs_profile": {
+      "klar": true,
+      "ideal_week_blocks": [
+        {"activity": "Skriva och redigera", "hours": 12},
+        {"activity": "Projektledning med beslut", "hours": 10},
+        {"activity": "Workshop med verksamheten", "hours": 6},
+        {"activity": "Mejl och administration", "hours": 4}
+      ],
+      "fit_requirements": {"supervisor": ["Ger mandat och står för det"], "group": ["Ett team med andra kommunikatörer"]}
+    },
+    "options": {
+      "klar": false,
+      "crafting_option": {
+        "task": ["Skriva själv två förmiddagar i veckan", "Lämna nyhetsbrevet till praktikanten"],
+        "relational": ["Fler projekt med vårdenheterna direkt"],
+        "cognitive": ["Se texterna som service till patienterna, inte till ledningen"],
+        "feasibility_0_10": 5
+      }
+    }
+  },
+  "status": {"aktuell_fas": "options", "senast": "2026-09-28"}
+}

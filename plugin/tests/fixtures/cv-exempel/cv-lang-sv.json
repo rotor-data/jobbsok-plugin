@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "sprak": "sv",
+  "design_version": 1,
+  "person": {
+    "namn": "Maja Lindqvist",
+    "titel": "Projektledare inom kommunikation",
+    "ort": "Uppsala",
+    "epost": "maja.lindqvist@example.se",
+    "telefon": "070-123 45 67",
+    "lankar": [
+      {
+        "etikett": "LinkedIn",
+        "url": "https://www.linkedin.com/in/majalindqvist-exempel"
+      }
+    ],
+    "foto": "foto.svg"
+  },
+  "profil": "Projektledare med tolv års erfarenhet av kommunikation i offentlig sektor, från redaktionellt arbete till strategiskt ansvar för stora förändringar. Jag gör komplexa beslut begripliga, bygger kanaler som används och får ledning och medarbetare att dra åt samma håll. Trygg i stora organisationer med många intressenter.",
+  "sektioner": [
+    {
+      "typ": "erfarenhet",
+      "rubrik": "Erfarenhet",
+      "poster": [
+        {
+          "titel": "Senior kommunikationsstrateg och projektledare för digital transformation och verksamhetsutveckling",
+          "organisation": "Region Uppsala – Hälso- och sjukvårdsförvaltningen, Avdelningen för digitalisering",
+          "ort": "Uppsala",
+          "period": "2021 – nu",
+          "punkter": [
+            "Ledde kommunikationen kring införandet av ett nytt journalsystem för 9 000 medarbetare på 14 sjukhus och vårdcentraler, i nära samarbete med IT, verksamhetschefer och fackliga företrädare",
+            "Byggde om intranätets startsida och navigering tillsammans med användare; besöken ökade med 40 % och supportärendena om ’var hittar jag’ halverades",
+            "Tog fram en budskapsplattform och en kanalstrategi som ledningsgruppen antog",
+            "Coachade 25 chefer i att leda dialogmöten om förändring",
+            "Införde mätning av räckvidd och förståelse i fyra kvartalsvisa enkäter"
+          ]
+        },
+        {
+          "titel": "Biträdande kommunikationschef med särskilt ansvar för intern kommunikation och förändringsledning",
+          "organisation": "Uppsala kommun, Kommunledningskontoret",
+          "ort": "Uppsala",
+          "period": "2019 – 2021",
+          "punkter": [
+            "Ledde kommunikationen kring införandet av ett nytt journalsystem för 9 000 medarbetare på 14 sjukhus och vårdcentraler, i nära samarbete med IT, verksamhetschefer och fackliga företrädare",
+            "Byggde om intranätets startsida och navigering tillsammans med användare; besöken ökade med 40 % och supportärendena om ’var hittar jag’ halverades",
+            "Tog fram en budskapsplattform och en kanalstrategi som ledningsgruppen antog",
+            "Coachade 25 chefer i att leda dialogmöten om förändring",
+            "Införde mätning av räckvidd och förståelse i fyra kvartalsvisa enkäter"
+          ]
+        },
+        {
+          "titel": "Kommunikatör och redaktör för intranät, nyhetsbrev och ledningskommunikation",
+          "organisation": "Sveriges Lantbruksuniversitet (SLU)",
+          "ort": "Uppsala",
+          "period": "2016 – 2019",
+          "punkter": [
+            "Ledde kommunikationen kring införandet av ett nytt journalsystem för 9 000 medarbetare på 14 sjukhus och vårdcentraler, i nära samarbete med IT, verksamhetschefer och fackliga företrädare",
+            "Byggde om intranätets startsida och navigering tillsammans med användare; besöken ökade med 40 % och supportärendena om ’var hittar jag’ halverades",
+            "Tog fram en budskapsplattform och en kanalstrategi som ledningsgruppen antog",
+            "Coachade 25 chefer i att leda dialogmöten om förändring"
+          ]
+        },
+        {
+          "titel": "Projektkoordinator, kommunikation och evenemang inom EU-finansierat utvecklingsprojekt",
+          "organisation": "Länsstyrelsen i Uppsala län",
+          "ort": "Uppsala",
+          "period": "2014 – 2016",
+          "punkter": [
+            "Ledde kommunikationen kring införandet av ett nytt journalsystem för 9 000 medarbetare på 14 sjukhus och vårdcentraler, i nära samarbete med IT, verksamhetschefer och fackliga företrädare",
+            "Byggde om intranätets startsida och navigering tillsammans med användare; besöken ökade med 40 % och supportärendena om ’var hittar jag’ halverades",
+            "Tog fram en budskapsplattform och en kanalstrategi som ledningsgruppen antog",
+            "Coachade 25 chefer i att leda dialogmöten om förändring"
+          ]
+        },
+        {
+          "titel": "Informatör (vikariat)",
+          "organisation": "Upsala Nya Tidning",
+          "ort": "Uppsala",
+          "period": "2013 – 2014",
+          "punkter": [
+            "Ledde kommunikationen kring införandet av ett nytt journalsystem för 9 000 medarbetare på 14 sjukhus och vårdcentraler, i nära samarbete med IT, verksamhetschefer och fackliga företrädare",
+            "Byggde om intranätets startsida och navigering tillsammans med användare; besöken ökade med 40 % och supportärendena om ’var hittar jag’ halverades"
+          ]
+        },
+        {
+          "titel": "Redaktionsassistent",
+          "organisation": "Studentradion i Uppsala",
+          "ort": "Uppsala",
+          "period": "2011 – 2013",
+          "punkter": [
+            "Ledde kommunikationen kring införandet av ett nytt journalsystem för 9 000 medarbetare på 14 sjukhus och vårdcentraler, i nära samarbete med IT, verksamhetschefer och fackliga företrädare",
+            "Byggde om intranätets startsida och navigering tillsammans med användare; besöken ökade med 40 % och supportärendena om ’var hittar jag’ halverades"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "utbildning",
+      "rubrik": "Utbildning",
+      "poster": [
+        {
+          "titel": "Medie- och kommunikationsvetenskap, kandidatexamen",
+          "organisation": "Uppsala universitet",
+          "period": "2008 – 2011",
+          "text": "Uppsats om klarspråk i myndighetstexter."
+        },
+        {
+          "titel": "Projektledning i offentlig sektor, 15 hp",
+          "organisation": "Stockholms universitet",
+          "period": "2015"
+        }
+      ]
+    },
+    {
+      "typ": "lista",
+      "rubrik": "Kompetenser",
+      "grupper": [
+        {
+          "etikett": "Kommunikation",
+          "poster": [
+            "Förändringskommunikation",
+            "Klarspråk",
+            "Intranät",
+            "Ledningskommunikation",
+            "Kriskommunikation",
+            "Budskapsplattformar"
+          ]
+        },
+        {
+          "etikett": "Projekt",
+          "poster": [
+            "Agil projektledning",
+            "Intressentanalys",
+            "Workshopledning"
+          ]
+        },
+        {
+          "etikett": "Verktyg",
+          "poster": [
+            "SiteVision",
+            "Episerver",
+            "Canva",
+            "Adobe InDesign",
+            "Microsoft 365",
+            "Mailchimp"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "lista",
+      "rubrik": "Språk",
+      "grupper": [
+        {
+          "etikett": "",
+          "poster": [
+            "Svenska (modersmål)",
+            "Engelska (flytande)",
+            "Tyska (grundläggande)"
+          ]
+        }
+      ]
+    },
+    {
+      "typ": "utbildning",
+      "id": "kurser",
+      "rubrik": "Kurser",
+      "poster": [
+        {
+          "titel": "Certifierad klarspråksgranskare",
+          "organisation": "Språkrådet",
+          "period": "2018"
+        },
+        {
+          "titel": "Kriskommunikation, MSB",
+          "organisation": "MSB",
+          "period": "2020"
+        }
+      ]
+    },
+    {
+      "typ": "text",
+      "id": "ideella",
+      "rubrik": "Ideellt engagemang",
+      "text": "Styrelseledamot och kommunikationsansvarig i Uppsala Roddklubb sedan 2017."
+    }
+  ]
+}
